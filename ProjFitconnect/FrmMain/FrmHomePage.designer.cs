@@ -193,7 +193,7 @@
             // 
             this.預約體驗ToolStripMenuItem.BackColor = System.Drawing.Color.LightCyan;
             this.預約體驗ToolStripMenuItem.Name = "預約體驗ToolStripMenuItem";
-            this.預約體驗ToolStripMenuItem.Size = new System.Drawing.Size(224, 34);
+            this.預約體驗ToolStripMenuItem.Size = new System.Drawing.Size(196, 34);
             this.預約體驗ToolStripMenuItem.Text = "預約體驗";
             this.預約體驗ToolStripMenuItem.Click += new System.EventHandler(this.預約體驗ToolStripMenuItem_Click);
             // 
@@ -201,7 +201,7 @@
             // 
             this.常見問題ToolStripMenuItem.BackColor = System.Drawing.Color.LightCyan;
             this.常見問題ToolStripMenuItem.Name = "常見問題ToolStripMenuItem";
-            this.常見問題ToolStripMenuItem.Size = new System.Drawing.Size(224, 34);
+            this.常見問題ToolStripMenuItem.Size = new System.Drawing.Size(196, 34);
             this.常見問題ToolStripMenuItem.Text = "常見問題";
             this.常見問題ToolStripMenuItem.Click += new System.EventHandler(this.常見問題ToolStripMenuItem_Click);
             // 

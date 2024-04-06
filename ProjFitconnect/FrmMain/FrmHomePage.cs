@@ -64,11 +64,6 @@ namespace ProjGym
             f.afterEdit += this.showinfo;
             f.TopLevel = false;
             f.FormBorderStyle = FormBorderStyle.None;
-
-            f.Visible = true;
-            f.Dock = DockStyle.Fill;
-            f.StartPosition = FormStartPosition.CenterParent;
-            f.MdiParent = this;
             this.splitContainer1.Panel2.Controls.Add(f);
             f.Show();
         }
