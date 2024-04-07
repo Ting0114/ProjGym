@@ -68,7 +68,8 @@ namespace FrmMain
                     rb.tc = item.classes;
                     rb.i = item.identity;
                     rb.ts = item.classSchedule;
-                    rb.td = item.time; 
+                    rb.td = item.time;
+                    rb.train = item.classes.tclass_sort_訓練;
                     rb.reserveConfirm += this.confirm;
                     if (flowLayoutPanel1.Controls.Equals(rb)) return;
                     flowLayoutPanel1.Controls.Add(rb);
@@ -79,7 +80,7 @@ namespace FrmMain
                 string TrainClass = chb.Tag.ToString();
                 for (int i = flowLayoutPanel1.Controls.Count - 1; i >= 0; i--)
                 { 
-                    if (flowLayoutPanel1.Controls[i] is ClassReservingBox rb && /*rb.train!=null&& */rb.train.class_sort2_detail.Equals(TrainClass))
+                    if (flowLayoutPanel1.Controls[i] is ClassReservingBox rb && rb.train.class_sort2_detail.Equals(TrainClass))
                     {
                         flowLayoutPanel1.Controls.Remove(rb);
                         rb.Dispose();
