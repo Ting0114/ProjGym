@@ -51,21 +51,20 @@
             // 
             // tb_Name
             // 
-            this.tb_Name.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tb_Name.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.tb_Name.Location = new System.Drawing.Point(253, 55);
-            this.tb_Name.Margin = new System.Windows.Forms.Padding(4);
+            this.tb_Name.Location = new System.Drawing.Point(255, 73);
+            this.tb_Name.Margin = new System.Windows.Forms.Padding(5);
             this.tb_Name.Name = "tb_Name";
-            this.tb_Name.Size = new System.Drawing.Size(432, 27);
+            this.tb_Name.Size = new System.Drawing.Size(539, 27);
             this.tb_Name.TabIndex = 6;
             // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label2.Location = new System.Drawing.Point(134, 50);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(106, 67);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 38);
             this.label2.TabIndex = 5;
@@ -73,11 +72,11 @@
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label1.Location = new System.Drawing.Point(134, 114);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(106, 152);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 38);
             this.label1.TabIndex = 7;
@@ -85,21 +84,20 @@
             // 
             // tb_Phone
             // 
-            this.tb_Phone.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tb_Phone.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.tb_Phone.Location = new System.Drawing.Point(253, 188);
-            this.tb_Phone.Margin = new System.Windows.Forms.Padding(4);
+            this.tb_Phone.Location = new System.Drawing.Point(255, 251);
+            this.tb_Phone.Margin = new System.Windows.Forms.Padding(5);
             this.tb_Phone.Name = "tb_Phone";
-            this.tb_Phone.Size = new System.Drawing.Size(432, 27);
+            this.tb_Phone.Size = new System.Drawing.Size(539, 27);
             this.tb_Phone.TabIndex = 10;
             // 
             // label3
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label3.Location = new System.Drawing.Point(134, 182);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(106, 243);
+            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(85, 38);
             this.label3.TabIndex = 9;
@@ -107,11 +105,11 @@
             // 
             // label4
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label4.Location = new System.Drawing.Point(134, 246);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(106, 328);
+            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 38);
             this.label4.TabIndex = 11;
@@ -119,21 +117,20 @@
             // 
             // tb_Mail
             // 
-            this.tb_Mail.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tb_Mail.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.tb_Mail.Location = new System.Drawing.Point(253, 370);
-            this.tb_Mail.Margin = new System.Windows.Forms.Padding(4);
+            this.tb_Mail.Location = new System.Drawing.Point(255, 493);
+            this.tb_Mail.Margin = new System.Windows.Forms.Padding(5);
             this.tb_Mail.Name = "tb_Mail";
-            this.tb_Mail.Size = new System.Drawing.Size(432, 27);
+            this.tb_Mail.Size = new System.Drawing.Size(539, 27);
             this.tb_Mail.TabIndex = 14;
             // 
             // label5
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label5.Location = new System.Drawing.Point(134, 365);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(106, 487);
+            this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(85, 38);
             this.label5.TabIndex = 13;
@@ -141,21 +138,20 @@
             // 
             // tb_Password
             // 
-            this.tb_Password.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tb_Password.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.tb_Password.Location = new System.Drawing.Point(253, 439);
-            this.tb_Password.Margin = new System.Windows.Forms.Padding(4);
+            this.tb_Password.Location = new System.Drawing.Point(255, 585);
+            this.tb_Password.Margin = new System.Windows.Forms.Padding(5);
             this.tb_Password.Name = "tb_Password";
-            this.tb_Password.Size = new System.Drawing.Size(432, 27);
+            this.tb_Password.Size = new System.Drawing.Size(539, 27);
             this.tb_Password.TabIndex = 16;
             // 
             // label6
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label6.Location = new System.Drawing.Point(134, 434);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(106, 579);
+            this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(85, 38);
             this.label6.TabIndex = 15;
@@ -163,38 +159,43 @@
             // 
             // btn_Save
             // 
-            this.btn_Save.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn_Save.BackColor = System.Drawing.Color.Snow;
+            this.btn_Save.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Pink;
+            this.btn_Save.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MistyRose;
+            this.btn_Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Save.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btn_Save.Location = new System.Drawing.Point(902, 479);
-            this.btn_Save.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Save.Location = new System.Drawing.Point(1157, 585);
+            this.btn_Save.Margin = new System.Windows.Forms.Padding(5);
             this.btn_Save.Name = "btn_Save";
-            this.btn_Save.Size = new System.Drawing.Size(123, 52);
+            this.btn_Save.Size = new System.Drawing.Size(136, 55);
             this.btn_Save.TabIndex = 17;
             this.btn_Save.Text = "保存";
-            this.btn_Save.UseVisualStyleBackColor = true;
+            this.btn_Save.UseVisualStyleBackColor = false;
             this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
             // btn_Cancel
             // 
-            this.btn_Cancel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn_Cancel.BackColor = System.Drawing.Color.Snow;
+            this.btn_Cancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Pink;
+            this.btn_Cancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MistyRose;
+            this.btn_Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Cancel.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btn_Cancel.Location = new System.Drawing.Point(740, 479);
-            this.btn_Cancel.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Cancel.Location = new System.Drawing.Point(955, 585);
+            this.btn_Cancel.Margin = new System.Windows.Forms.Padding(5);
             this.btn_Cancel.Name = "btn_Cancel";
-            this.btn_Cancel.Size = new System.Drawing.Size(123, 52);
+            this.btn_Cancel.Size = new System.Drawing.Size(136, 55);
             this.btn_Cancel.TabIndex = 17;
             this.btn_Cancel.Text = "取消";
-            this.btn_Cancel.UseVisualStyleBackColor = true;
+            this.btn_Cancel.UseVisualStyleBackColor = false;
             this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
             // 
             // pb_Photo
             // 
-            this.pb_Photo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pb_Photo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pb_Photo.Location = new System.Drawing.Point(733, 61);
-            this.pb_Photo.Margin = new System.Windows.Forms.Padding(4);
+            this.pb_Photo.Location = new System.Drawing.Point(855, 81);
+            this.pb_Photo.Margin = new System.Windows.Forms.Padding(5);
             this.pb_Photo.Name = "pb_Photo";
-            this.pb_Photo.Size = new System.Drawing.Size(351, 352);
+            this.pb_Photo.Size = new System.Drawing.Size(438, 469);
             this.pb_Photo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_Photo.TabIndex = 18;
             this.pb_Photo.TabStop = false;
@@ -206,42 +207,39 @@
             // 
             // cb_Gender
             // 
-            this.cb_Gender.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cb_Gender.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.cb_Gender.FormattingEnabled = true;
-            this.cb_Gender.Location = new System.Drawing.Point(253, 118);
-            this.cb_Gender.Margin = new System.Windows.Forms.Padding(4);
+            this.cb_Gender.Location = new System.Drawing.Point(255, 157);
+            this.cb_Gender.Margin = new System.Windows.Forms.Padding(5);
             this.cb_Gender.Name = "cb_Gender";
-            this.cb_Gender.Size = new System.Drawing.Size(160, 27);
+            this.cb_Gender.Size = new System.Drawing.Size(199, 27);
             this.cb_Gender.TabIndex = 19;
             // 
             // dateTimePicker_Birth
             // 
-            this.dateTimePicker_Birth.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dateTimePicker_Birth.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.dateTimePicker_Birth.Location = new System.Drawing.Point(253, 251);
-            this.dateTimePicker_Birth.Margin = new System.Windows.Forms.Padding(4);
+            this.dateTimePicker_Birth.Location = new System.Drawing.Point(255, 335);
+            this.dateTimePicker_Birth.Margin = new System.Windows.Forms.Padding(5);
             this.dateTimePicker_Birth.Name = "dateTimePicker_Birth";
-            this.dateTimePicker_Birth.Size = new System.Drawing.Size(265, 27);
+            this.dateTimePicker_Birth.Size = new System.Drawing.Size(330, 27);
             this.dateTimePicker_Birth.TabIndex = 20;
             // 
             // tb_Address
             // 
-            this.tb_Address.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tb_Address.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.tb_Address.Location = new System.Drawing.Point(253, 312);
-            this.tb_Address.Margin = new System.Windows.Forms.Padding(4);
+            this.tb_Address.Location = new System.Drawing.Point(255, 416);
+            this.tb_Address.Margin = new System.Windows.Forms.Padding(5);
             this.tb_Address.Name = "tb_Address";
-            this.tb_Address.Size = new System.Drawing.Size(432, 27);
+            this.tb_Address.Size = new System.Drawing.Size(539, 27);
             this.tb_Address.TabIndex = 22;
             // 
             // label7
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label7.Location = new System.Drawing.Point(134, 308);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(106, 411);
+            this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(85, 38);
             this.label7.TabIndex = 21;
@@ -249,10 +247,10 @@
             // 
             // FrmEditMemberRegister
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LavenderBlush;
-            this.ClientSize = new System.Drawing.Size(1164, 562);
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.ClientSize = new System.Drawing.Size(1334, 749);
             this.Controls.Add(this.tb_Address);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.dateTimePicker_Birth);
@@ -270,11 +268,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tb_Name);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmEditMemberRegister";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmMemberRegister";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Text = "Member | 編輯個人資料";
             this.Load += new System.EventHandler(this.FrmMemberRegister_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pb_Photo)).EndInit();
             this.ResumeLayout(false);

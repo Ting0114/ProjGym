@@ -56,11 +56,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmAdmin_Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAdmin_Payment.Designer.cs">
+      <DependentUpon>FrmAdmin_Payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEditMemberRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditMemberRegister.Designer.cs">
+      <DependentUpon>FrmEditMemberRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRateClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRateClass.Designer.cs">
+      <DependentUpon>FrmRateClass.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmReservingClasses.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmReservingClasses.Designer.cs">
       <DependentUpon>FrmReservingClasses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tool\rateClassBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="tool\rateClassBox.Designer.cs">
+      <DependentUpon>rateClassBox.cs</DependentUpon>
     </Compile>
     <Compile Include="tool\ClassReservingBox.cs">
       <SubType>UserControl</SubType>
@@ -112,12 +136,6 @@
     </Compile>
     <Compile Include="FrmEditCoachRegister.designer.cs">
       <DependentUpon>FrmEditCoachRegister.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmEditMemberRegister.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmEditMemberRegister.designer.cs">
-      <DependentUpon>FrmEditMemberRegister.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmFollow.cs">
       <SubType>Form</SubType>
@@ -322,8 +340,20 @@
     <Compile Include="ttimes_detail.cs">
       <DependentUpon>DB.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FrmAdmin_Payment.resx">
+      <DependentUpon>FrmAdmin_Payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditMemberRegister.resx">
+      <DependentUpon>FrmEditMemberRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRateClass.resx">
+      <DependentUpon>FrmRateClass.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmReservingClasses.resx">
       <DependentUpon>FrmReservingClasses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tool\rateClassBox.resx">
+      <DependentUpon>rateClassBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="tool\ClassReservingBox.resx">
       <DependentUpon>ClassReservingBox.cs</DependentUpon>
@@ -342,9 +372,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmEditCoachRegister.resx">
       <DependentUpon>FrmEditCoachRegister.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmEditMemberRegister.resx">
-      <DependentUpon>FrmEditMemberRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmFollow.resx">
       <DependentUpon>FrmFollow.cs</DependentUpon>

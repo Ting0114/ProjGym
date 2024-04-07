@@ -313,13 +313,14 @@
             // 對課程ToolStripMenuItem
             // 
             this.對課程ToolStripMenuItem.Name = "對課程ToolStripMenuItem";
-            this.對課程ToolStripMenuItem.Size = new System.Drawing.Size(172, 34);
+            this.對課程ToolStripMenuItem.Size = new System.Drawing.Size(224, 34);
             this.對課程ToolStripMenuItem.Text = "對課程";
+            this.對課程ToolStripMenuItem.Click += new System.EventHandler(this.對課程ToolStripMenuItem_Click);
             // 
             // 對教練ToolStripMenuItem
             // 
             this.對教練ToolStripMenuItem.Name = "對教練ToolStripMenuItem";
-            this.對教練ToolStripMenuItem.Size = new System.Drawing.Size(172, 34);
+            this.對教練ToolStripMenuItem.Size = new System.Drawing.Size(224, 34);
             this.對教練ToolStripMenuItem.Text = "對教練";
             this.對教練ToolStripMenuItem.Click += new System.EventHandler(this.對教練ToolStripMenuItem_Click);
             // 
@@ -454,6 +455,7 @@
             this.付款資訊ToolStripMenuItem.Name = "付款資訊ToolStripMenuItem";
             this.付款資訊ToolStripMenuItem.Size = new System.Drawing.Size(220, 34);
             this.付款資訊ToolStripMenuItem.Text = "付款資訊";
+            this.付款資訊ToolStripMenuItem.Click += new System.EventHandler(this.付款資訊ToolStripMenuItem_Click);
             // 
             // 新增管理者ToolStripMenuItem
             // 
