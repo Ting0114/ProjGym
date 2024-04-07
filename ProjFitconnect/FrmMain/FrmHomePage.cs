@@ -255,8 +255,8 @@ namespace ProjGym
         private void 訓練課程ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.splitContainer1.Panel2.Controls.Clear();
-            FrmMember_ClassList f = new FrmMember_ClassList();
-            f.MdiParent = this;
+            FrmReservingClasses f = new FrmReservingClasses();
+            f.Identity = this.identity; 
             f.TopLevel = false;
             f.FormBorderStyle = FormBorderStyle.None;
             this.splitContainer1.Panel2.Controls.Add(f);
@@ -329,6 +329,7 @@ namespace ProjGym
         {
             MainLog();
             showinfo(this.identity);
+            showmain();
         }
 
         private void 對教練ToolStripMenuItem_Click(object sender, EventArgs e)
