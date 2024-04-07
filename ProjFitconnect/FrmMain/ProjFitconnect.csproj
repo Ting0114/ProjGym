@@ -56,6 +56,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmReservingClasses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReservingClasses.Designer.cs">
+      <DependentUpon>FrmReservingClasses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tool\ClassReservingBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="tool\ClassReservingBox.Designer.cs">
+      <DependentUpon>ClassReservingBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="DB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -310,6 +322,12 @@
     <Compile Include="ttimes_detail.cs">
       <DependentUpon>DB.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FrmReservingClasses.resx">
+      <DependentUpon>FrmReservingClasses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tool\ClassReservingBox.resx">
+      <DependentUpon>ClassReservingBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmAdmin_Checkmember.resx">
       <DependentUpon>FrmAdmin_Checkmember.cs</DependentUpon>
     </EmbeddedResource>

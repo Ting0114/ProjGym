@@ -244,7 +244,7 @@
             this.訓練課程ToolStripMenuItem.BackColor = System.Drawing.Color.LightCyan;
             this.訓練課程ToolStripMenuItem.Name = "訓練課程ToolStripMenuItem";
             this.訓練課程ToolStripMenuItem.Size = new System.Drawing.Size(220, 34);
-            this.訓練課程ToolStripMenuItem.Text = "訓練課程";
+            this.訓練課程ToolStripMenuItem.Text = "預約課程";
             this.訓練課程ToolStripMenuItem.Click += new System.EventHandler(this.訓練課程ToolStripMenuItem_Click);
             // 
             // 找商品ToolStripMenuItem
