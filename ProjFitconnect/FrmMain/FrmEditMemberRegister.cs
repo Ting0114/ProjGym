@@ -16,12 +16,21 @@ namespace ProjGym
     public delegate void D_Register(tIdentity m);
     public partial class FrmEditMemberRegister : Form
     {
-        public tIdentity identity { get; set; }//todo Add#1
         //宣告一個資料型別為D_Register、名稱為afterEdit的事件
         public event D_Register afterEdit;
         //全域變數_filename用來記錄[登入者]的照片檔案名稱，預設為空字串(因為會員可以不放照片)
         private string _filename = string.Empty;
-
+        public tIdentity member { get; set; }
+        public TextBox name { get { return this.tb_Name; } }
+        public ComboBox gender { get { return this.cb_Gender; } }
+        public TextBox phone { get { return this.tb_Phone; } }
+        public DateTimePicker birth { get { return this.dateTimePicker_Birth; } }
+        public TextBox mail { get { return this.tb_Mail; } }
+        public TextBox address { get { return this.tb_Address; } }
+        public TextBox password { get { return this.tb_Password; } }
+        public PictureBox photo { get { return this.pb_Photo; } }
+        public Button save { get { return this.btn_Save; } }
+        public Button cancel { get { return this.btn_Cancel; } }
         //[編輯會員資料]表單的建構子，在new FrmEditMemberRegister()時被執行
         public FrmEditMemberRegister()
         {
@@ -40,13 +49,13 @@ namespace ProjGym
         private void FrmMemberRegister_Load(object sender, EventArgs e)
         {
             //產生[gym資料庫實體]
-            gymEntities db = new gymEntities();
+            gymEntities gymEntities = new gymEntities();
             //利用[編輯會員資料]表單的MdiParent屬性取得[主程式表單]
             //利用[主程式表單]的member屬性取得[登入者]資料
             //取得[登入者]資料中唯一不變的id屬性(流水號)
-            int index = this.identity.id;//todo Edit#1
+            int index = this.member.id;
             //在[Identity]資料表內，利用[登入者]的流水號找出對應的會員(m)
-            tIdentity m = db.tIdentity.FirstOrDefault(x => x.id == index);
+            tIdentity m = gymEntities.tIdentity.FirstOrDefault(x => x.id == index);
             //利用m的名稱、身分ID、性別ID、電話、地址、生日、電郵、密碼、照片檔案名稱，
             //分別設定至[編輯會員資料]表單的textbox、combobox與dateTimePicker
             this.tb_Name.Text = m.name;
@@ -72,15 +81,15 @@ namespace ProjGym
         private void btn_Save_Click(object sender, EventArgs e)
         {
             //產生[gym資料庫實體]
-            gymEntities db = new gymEntities();
+            gymEntities gymEntities = new gymEntities();
             //利用[編輯會員資料]表單的MdiParent屬性取得[主程式表單]
             //利用[主程式表單]的member屬性取得[登入者]資料
             //取得[登入者]資料中唯一不變的id屬性(流水號)
-            int index = this.identity.id;
+            int index = this.member.id;
             //在[Identity]資料表內，利用[登入者]的流水號找出對應的會員欄位(m)
-            tIdentity m = db.tIdentity.FirstOrDefault(x => x.id == index);
+            tIdentity m = gymEntities.tIdentity.FirstOrDefault(x => x.id == index);
             //依照combobox_Gender所選的性別，找出對應的性別ID
-            tgender_Table g = db.tgender_Table.FirstOrDefault(x => x.gender_text.Equals(this.cb_Gender.SelectedItem.ToString()));
+            tgender_Table g = gymEntities.tgender_Table.FirstOrDefault(x => x.gender_text.Equals(this.cb_Gender.SelectedItem.ToString()));
             //將[登入者]的會員資料修改為[編輯會員資料]表單上的textbox、combobox與dateTimePicker
             m.name = this.tb_Name.Text;
             m.gender_id = g.gender_id;
@@ -90,7 +99,7 @@ namespace ProjGym
             m.password = this.tb_Password.Text;
             m.address = this.tb_Address.Text;
             m.photo = this._filename;
-            db.SaveChanges();
+            gymEntities.SaveChanges();
             MessageBox.Show("資料已成功儲存");
             //先前已在[主程式]表單內的[修改會員資料ToolStripMenuItem_Click]方法內，
             //註冊showinfo方法來處理afterLogin事件

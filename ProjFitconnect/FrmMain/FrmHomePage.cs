@@ -57,10 +57,9 @@ namespace ProjGym
 
         private void 修改會員資料ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            closeCurrentForm();
             this.splitContainer1.Panel2.Controls.Clear();
             FrmEditMemberRegister f = new FrmEditMemberRegister();
-            f.identity = this.identity;
+            f.member = this.identity;
             f.afterEdit += this.showinfo;
             f.TopLevel = false;
             f.FormBorderStyle = FormBorderStyle.None;
@@ -244,11 +243,14 @@ namespace ProjGym
 
         private void 開課審核ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.splitContainer1.Panel2.Controls.Clear();
+            closeCurrentForm();
             FrmAdmin_ClassUpdate f = new FrmAdmin_ClassUpdate();
             f.MdiParent = this;
             f.TopLevel = false;
             f.FormBorderStyle = FormBorderStyle.None;
+            f.Dock = DockStyle.Fill;
+            f.Visible = true;
+
             this.splitContainer1.Panel2.Controls.Add(f);
             f.Show();
         }
@@ -336,6 +338,31 @@ namespace ProjGym
         {
             this.splitContainer1.Panel2.Controls.Clear();
             FrmFollow f = new FrmFollow();
+            f.MdiParent = this;
+            f.identity = this.identity;
+            f.TopLevel = false;
+            f.FormBorderStyle = FormBorderStyle.None;
+            this.splitContainer1.Panel2.Controls.Add(f);
+            f.Show();
+        }
+
+        private void 付款資訊ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.splitContainer1.Panel2.Controls.Clear();
+            FrmAdmin_Payment f = new FrmAdmin_Payment();
+            f.MdiParent = this;
+            f.TopLevel = false;
+            f.FormBorderStyle = FormBorderStyle.None;
+            f.Dock = DockStyle.Fill;
+            f.Visible = true;
+
+            this.splitContainer1.Panel2.Controls.Add(f);
+        }
+
+        private void 對課程ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.splitContainer1.Panel2.Controls.Clear();
+            FrmRateClass f = new FrmRateClass();
             f.MdiParent = this;
             f.identity = this.identity;
             f.TopLevel = false;
