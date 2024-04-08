@@ -148,7 +148,9 @@ namespace ProjGym
         {
             FrmNewAdminRegister frm = new FrmNewAdminRegister();
             frm.savedata += FrmAdmin_register;
-            frm.ShowDialog();
+            frm.TopLevel = false;
+            this.splitContainer1.Panel2.Controls.Add(frm);
+            frm.Show(); 
             if (frm.result == DialogResult.No)
                 return;
         }
