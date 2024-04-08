@@ -14,7 +14,7 @@ namespace ProjGym
     
     public partial class FrmCoach_AddNewCourse : Form
     {
-        
+        public tIdentity coach;
         public FrmCoach_AddNewCourse()
         {
             InitializeComponent();
@@ -89,8 +89,8 @@ namespace ProjGym
                     schedule.class_id = this.cb_Class.SelectedIndex + 1;
                     schedule.field_id = this.cb_Field.SelectedIndex + 1;
                     //Todo:coach_id = 1，要改為取得登入者id
-                    schedule.coach_id = 1;
-                    schedule.class_status_id = 2;
+                    schedule.coach_id = coach.id;
+                    schedule.class_status_id = 4;
                     schedule.Max_student = (int)this.numericUpDown_MaxStudent.Value;
                     schedule.course_date = DateTime.Parse(lb_SelectedDate.Items[i].ToString());
                     schedule.course_time_id = timePeriodStartIndex + 1 + j;

@@ -236,6 +236,7 @@ namespace ProjGym
         {
             this.splitContainer1.Panel2.Controls.Clear();
             FrmCoach_AddNewCourse f = new FrmCoach_AddNewCourse();
+            f.coach = this.identity;
             f.MdiParent = this;
             f.TopLevel = false;
             f.FormBorderStyle = FormBorderStyle.None;
