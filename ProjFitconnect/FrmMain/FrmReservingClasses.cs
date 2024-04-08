@@ -80,7 +80,7 @@ namespace FrmMain
                 string TrainClass = chb.Tag.ToString();
                 for (int i = flowLayoutPanel1.Controls.Count - 1; i >= 0; i--)
                 { 
-                    if (flowLayoutPanel1.Controls[i] is ClassReservingBox rb && rb.train.class_sort2_detail.Equals(TrainClass))
+                    if (flowLayoutPanel1.Controls[i] is ClassReservingBox rb &&rb.train!=null&& rb.train.class_sort2_detail.Equals(TrainClass))
                     {
                         flowLayoutPanel1.Controls.Remove(rb);
                         rb.Dispose();
