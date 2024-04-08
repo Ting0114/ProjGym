@@ -385,5 +385,6 @@ namespace ProjGym
             this.splitContainer1.Panel2.Controls.Add(f);
             f.Show();
         }
+
     }
 }

@@ -36,7 +36,8 @@ namespace FrmMain
         public System.DateTime birthday { get; set; }
         public string address { get; set; }
         public int gender_id { get; set; }
-        public Nullable<bool> activated { get; set; }
+        public bool activated { get; set; }
+        public Nullable<decimal> payment { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tclass_reserve> tclass_reserve { get; set; }

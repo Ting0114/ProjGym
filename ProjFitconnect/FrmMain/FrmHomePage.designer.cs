@@ -344,6 +344,7 @@
             // 關於我們ToolStripMenuItem
             // 
             this.關於我們ToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
+            this.關於我們ToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.關於我們ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fACEBOOKToolStripMenuItem,
             this.iNSTAGRAMToolStripMenuItem,

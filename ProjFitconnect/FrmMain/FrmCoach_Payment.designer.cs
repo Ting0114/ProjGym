@@ -330,6 +330,7 @@
             this.Controls.Add(this.lbl_IdentityTitle);
             this.Controls.Add(this.dataGridView_Payment);
             this.Name = "FrmCoach_Payment";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmCoach_Payment";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmCoach_Payment_Load);
