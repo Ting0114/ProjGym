@@ -62,11 +62,11 @@
             this.會員資訊ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.開課審核ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.教練審核ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.場地付款資訊ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.課程付款資訊ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.新增管理者ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.登出ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.登入ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.場地付款資訊ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -422,6 +422,14 @@
             this.教練審核ToolStripMenuItem.Text = "教練審核";
             this.教練審核ToolStripMenuItem.Click += new System.EventHandler(this.教練審核ToolStripMenuItem_Click);
             // 
+            // 場地付款資訊ToolStripMenuItem
+            // 
+            this.場地付款資訊ToolStripMenuItem.BackColor = System.Drawing.Color.LightCyan;
+            this.場地付款資訊ToolStripMenuItem.Name = "場地付款資訊ToolStripMenuItem";
+            this.場地付款資訊ToolStripMenuItem.Size = new System.Drawing.Size(244, 34);
+            this.場地付款資訊ToolStripMenuItem.Text = "場地付款資訊";
+            this.場地付款資訊ToolStripMenuItem.Click += new System.EventHandler(this.場地付款資訊ToolStripMenuItem_Click);
+            // 
             // 課程付款資訊ToolStripMenuItem
             // 
             this.課程付款資訊ToolStripMenuItem.BackColor = System.Drawing.Color.LightCyan;
@@ -459,14 +467,6 @@
             this.登入ToolStripMenuItem.Text = "登入";
             this.登入ToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.登入ToolStripMenuItem.Click += new System.EventHandler(this.登入ToolStripMenuItem_Click);
-            // 
-            // 場地付款資訊ToolStripMenuItem
-            // 
-            this.場地付款資訊ToolStripMenuItem.BackColor = System.Drawing.Color.LightCyan;
-            this.場地付款資訊ToolStripMenuItem.Name = "場地付款資訊ToolStripMenuItem";
-            this.場地付款資訊ToolStripMenuItem.Size = new System.Drawing.Size(244, 34);
-            this.場地付款資訊ToolStripMenuItem.Text = "場地付款資訊";
-            this.場地付款資訊ToolStripMenuItem.Click += new System.EventHandler(this.場地付款資訊ToolStripMenuItem_Click);
             // 
             // FrmHomePage
             // 

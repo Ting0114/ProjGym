@@ -61,7 +61,7 @@ namespace FrmMain
             this.tb_Password.Text = MM.password;
             this._filename = MM.photo;
 
-            tcoach_info_id CC = db.tcoach_info_id.FirstOrDefault(x => x.coach_id == MM.id);
+            tcoach_info_id CC = db.tcoach_info_id.FirstOrDefault(x => x.coach_id == index);
             tb_intro.Text = CC.coach_intro;
 
             var expername = from r in db.tclasses
