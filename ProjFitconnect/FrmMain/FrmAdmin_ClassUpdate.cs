@@ -194,6 +194,10 @@ namespace mid_Coonect
         }
         private void DataGridView_ClassSortList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex == -1)
+            {
+                return;
+            }
             _index = (int)dataGridView_ClassSortList.Rows[e.RowIndex].Cells[0].Value;
             dbSelect(_index);
         }
