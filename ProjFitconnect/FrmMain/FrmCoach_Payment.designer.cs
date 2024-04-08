@@ -52,9 +52,10 @@
             // 
             // dateTimePicker_Filter
             // 
-            this.dateTimePicker_Filter.Location = new System.Drawing.Point(15, 29);
+            this.dateTimePicker_Filter.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.dateTimePicker_Filter.Location = new System.Drawing.Point(17, 33);
             this.dateTimePicker_Filter.Name = "dateTimePicker_Filter";
-            this.dateTimePicker_Filter.Size = new System.Drawing.Size(200, 23);
+            this.dateTimePicker_Filter.Size = new System.Drawing.Size(228, 34);
             this.dateTimePicker_Filter.TabIndex = 63;
             this.dateTimePicker_Filter.Value = new System.DateTime(2024, 4, 4, 0, 0, 0, 0);
             this.dateTimePicker_Filter.ValueChanged += new System.EventHandler(this.dateTimePicker_Filter_ValueChanged);
@@ -66,10 +67,10 @@
             this.lbl_Date.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Date.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lbl_Date.ForeColor = System.Drawing.Color.Black;
-            this.lbl_Date.Location = new System.Drawing.Point(1012, 132);
-            this.lbl_Date.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Date.Location = new System.Drawing.Point(1157, 152);
+            this.lbl_Date.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbl_Date.Name = "lbl_Date";
-            this.lbl_Date.Size = new System.Drawing.Size(26, 23);
+            this.lbl_Date.Size = new System.Drawing.Size(30, 25);
             this.lbl_Date.TabIndex = 62;
             this.lbl_Date.Text = "--";
             // 
@@ -78,10 +79,11 @@
             this.lbl_DateTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_DateTitle.AutoSize = true;
             this.lbl_DateTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_DateTitle.Location = new System.Drawing.Point(917, 140);
-            this.lbl_DateTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_DateTitle.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lbl_DateTitle.Location = new System.Drawing.Point(1048, 162);
+            this.lbl_DateTitle.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbl_DateTitle.Name = "lbl_DateTitle";
-            this.lbl_DateTitle.Size = new System.Drawing.Size(36, 13);
+            this.lbl_DateTitle.Size = new System.Drawing.Size(57, 25);
             this.lbl_DateTitle.TabIndex = 61;
             this.lbl_DateTitle.Text = "日期:";
             // 
@@ -92,10 +94,10 @@
             this.lbl_CoachName.BackColor = System.Drawing.Color.Transparent;
             this.lbl_CoachName.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lbl_CoachName.ForeColor = System.Drawing.Color.Black;
-            this.lbl_CoachName.Location = new System.Drawing.Point(1012, 270);
-            this.lbl_CoachName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_CoachName.Location = new System.Drawing.Point(1157, 312);
+            this.lbl_CoachName.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbl_CoachName.Name = "lbl_CoachName";
-            this.lbl_CoachName.Size = new System.Drawing.Size(26, 23);
+            this.lbl_CoachName.Size = new System.Drawing.Size(30, 25);
             this.lbl_CoachName.TabIndex = 60;
             this.lbl_CoachName.Text = "--";
             // 
@@ -106,10 +108,10 @@
             this.lbl_FieldName.BackColor = System.Drawing.Color.Transparent;
             this.lbl_FieldName.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lbl_FieldName.ForeColor = System.Drawing.Color.Black;
-            this.lbl_FieldName.Location = new System.Drawing.Point(1012, 201);
-            this.lbl_FieldName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_FieldName.Location = new System.Drawing.Point(1157, 232);
+            this.lbl_FieldName.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbl_FieldName.Name = "lbl_FieldName";
-            this.lbl_FieldName.Size = new System.Drawing.Size(26, 23);
+            this.lbl_FieldName.Size = new System.Drawing.Size(30, 25);
             this.lbl_FieldName.TabIndex = 59;
             this.lbl_FieldName.Text = "--";
             // 
@@ -117,10 +119,10 @@
             // 
             this.lbl_Divider.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Divider.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lbl_Divider.Location = new System.Drawing.Point(868, 496);
-            this.lbl_Divider.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Divider.Location = new System.Drawing.Point(992, 572);
+            this.lbl_Divider.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbl_Divider.Name = "lbl_Divider";
-            this.lbl_Divider.Size = new System.Drawing.Size(400, 2);
+            this.lbl_Divider.Size = new System.Drawing.Size(457, 2);
             this.lbl_Divider.TabIndex = 58;
             this.lbl_Divider.Text = "label1";
             // 
@@ -131,10 +133,10 @@
             this.btn_ClearFilter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MistyRose;
             this.btn_ClearFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ClearFilter.Font = new System.Drawing.Font("微軟正黑體", 10.76635F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btn_ClearFilter.Location = new System.Drawing.Point(263, 28);
-            this.btn_ClearFilter.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_ClearFilter.Location = new System.Drawing.Point(287, 30);
+            this.btn_ClearFilter.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btn_ClearFilter.Name = "btn_ClearFilter";
-            this.btn_ClearFilter.Size = new System.Drawing.Size(96, 36);
+            this.btn_ClearFilter.Size = new System.Drawing.Size(110, 42);
             this.btn_ClearFilter.TabIndex = 56;
             this.btn_ClearFilter.Text = "清除篩選";
             this.btn_ClearFilter.UseVisualStyleBackColor = false;
@@ -148,10 +150,10 @@
             this.btn_Save.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MistyRose;
             this.btn_Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Save.Font = new System.Drawing.Font("微軟正黑體", 10.76635F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btn_Save.Location = new System.Drawing.Point(1085, 542);
-            this.btn_Save.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_Save.Location = new System.Drawing.Point(1240, 625);
+            this.btn_Save.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btn_Save.Name = "btn_Save";
-            this.btn_Save.Size = new System.Drawing.Size(103, 45);
+            this.btn_Save.Size = new System.Drawing.Size(118, 52);
             this.btn_Save.TabIndex = 55;
             this.btn_Save.Text = "儲存";
             this.btn_Save.UseVisualStyleBackColor = false;
@@ -165,10 +167,10 @@
             this.btn_Cancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MistyRose;
             this.btn_Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Cancel.Font = new System.Drawing.Font("微軟正黑體", 10.76635F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btn_Cancel.Location = new System.Drawing.Point(915, 542);
-            this.btn_Cancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_Cancel.Location = new System.Drawing.Point(1046, 625);
+            this.btn_Cancel.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btn_Cancel.Name = "btn_Cancel";
-            this.btn_Cancel.Size = new System.Drawing.Size(103, 45);
+            this.btn_Cancel.Size = new System.Drawing.Size(118, 52);
             this.btn_Cancel.TabIndex = 57;
             this.btn_Cancel.Text = "取消";
             this.btn_Cancel.UseVisualStyleBackColor = false;
@@ -178,10 +180,10 @@
             // 
             this.cb_ReserveStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cb_ReserveStatus.FormattingEnabled = true;
-            this.cb_ReserveStatus.Location = new System.Drawing.Point(1012, 416);
-            this.cb_ReserveStatus.Margin = new System.Windows.Forms.Padding(4);
+            this.cb_ReserveStatus.Location = new System.Drawing.Point(1157, 480);
+            this.cb_ReserveStatus.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.cb_ReserveStatus.Name = "cb_ReserveStatus";
-            this.cb_ReserveStatus.Size = new System.Drawing.Size(189, 21);
+            this.cb_ReserveStatus.Size = new System.Drawing.Size(215, 23);
             this.cb_ReserveStatus.TabIndex = 54;
             this.cb_ReserveStatus.Text = "--";
             // 
@@ -190,10 +192,11 @@
             this.lbl_ReserveStatusTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_ReserveStatusTitle.AutoSize = true;
             this.lbl_ReserveStatusTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_ReserveStatusTitle.Location = new System.Drawing.Point(891, 420);
-            this.lbl_ReserveStatusTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_ReserveStatusTitle.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lbl_ReserveStatusTitle.Location = new System.Drawing.Point(1018, 485);
+            this.lbl_ReserveStatusTitle.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbl_ReserveStatusTitle.Name = "lbl_ReserveStatusTitle";
-            this.lbl_ReserveStatusTitle.Size = new System.Drawing.Size(62, 13);
+            this.lbl_ReserveStatusTitle.Size = new System.Drawing.Size(97, 25);
             this.lbl_ReserveStatusTitle.TabIndex = 53;
             this.lbl_ReserveStatusTitle.Text = "保留狀態:";
             // 
@@ -201,10 +204,10 @@
             // 
             this.cb_PaymentStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cb_PaymentStatus.FormattingEnabled = true;
-            this.cb_PaymentStatus.Location = new System.Drawing.Point(1012, 339);
-            this.cb_PaymentStatus.Margin = new System.Windows.Forms.Padding(4);
+            this.cb_PaymentStatus.Location = new System.Drawing.Point(1157, 391);
+            this.cb_PaymentStatus.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.cb_PaymentStatus.Name = "cb_PaymentStatus";
-            this.cb_PaymentStatus.Size = new System.Drawing.Size(189, 21);
+            this.cb_PaymentStatus.Size = new System.Drawing.Size(215, 23);
             this.cb_PaymentStatus.TabIndex = 52;
             this.cb_PaymentStatus.Text = "--";
             // 
@@ -213,10 +216,11 @@
             this.lbl_PayStatusTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_PayStatusTitle.AutoSize = true;
             this.lbl_PayStatusTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_PayStatusTitle.Location = new System.Drawing.Point(891, 343);
-            this.lbl_PayStatusTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_PayStatusTitle.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lbl_PayStatusTitle.Location = new System.Drawing.Point(1018, 396);
+            this.lbl_PayStatusTitle.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbl_PayStatusTitle.Name = "lbl_PayStatusTitle";
-            this.lbl_PayStatusTitle.Size = new System.Drawing.Size(62, 13);
+            this.lbl_PayStatusTitle.Size = new System.Drawing.Size(97, 25);
             this.lbl_PayStatusTitle.TabIndex = 51;
             this.lbl_PayStatusTitle.Text = "付款狀態:";
             // 
@@ -225,10 +229,11 @@
             this.lbl_CoachIDTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_CoachIDTitle.AutoSize = true;
             this.lbl_CoachIDTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_CoachIDTitle.Location = new System.Drawing.Point(891, 270);
-            this.lbl_CoachIDTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_CoachIDTitle.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lbl_CoachIDTitle.Location = new System.Drawing.Point(1018, 312);
+            this.lbl_CoachIDTitle.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbl_CoachIDTitle.Name = "lbl_CoachIDTitle";
-            this.lbl_CoachIDTitle.Size = new System.Drawing.Size(62, 13);
+            this.lbl_CoachIDTitle.Size = new System.Drawing.Size(97, 25);
             this.lbl_CoachIDTitle.TabIndex = 49;
             this.lbl_CoachIDTitle.Text = "教練名稱:";
             // 
@@ -237,10 +242,11 @@
             this.lbl_FieldIDTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_FieldIDTitle.AutoSize = true;
             this.lbl_FieldIDTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_FieldIDTitle.Location = new System.Drawing.Point(891, 201);
-            this.lbl_FieldIDTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_FieldIDTitle.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lbl_FieldIDTitle.Location = new System.Drawing.Point(1018, 232);
+            this.lbl_FieldIDTitle.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbl_FieldIDTitle.Name = "lbl_FieldIDTitle";
-            this.lbl_FieldIDTitle.Size = new System.Drawing.Size(62, 13);
+            this.lbl_FieldIDTitle.Size = new System.Drawing.Size(97, 25);
             this.lbl_FieldIDTitle.TabIndex = 50;
             this.lbl_FieldIDTitle.Text = "場地名稱:";
             // 
@@ -251,10 +257,10 @@
             this.lbl_Identity.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Identity.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lbl_Identity.ForeColor = System.Drawing.Color.Black;
-            this.lbl_Identity.Location = new System.Drawing.Point(1012, 75);
-            this.lbl_Identity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Identity.Location = new System.Drawing.Point(1157, 87);
+            this.lbl_Identity.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbl_Identity.Name = "lbl_Identity";
-            this.lbl_Identity.Size = new System.Drawing.Size(26, 23);
+            this.lbl_Identity.Size = new System.Drawing.Size(30, 25);
             this.lbl_Identity.TabIndex = 48;
             this.lbl_Identity.Text = "--";
             // 
@@ -262,10 +268,10 @@
             // 
             this.lbl_DateFilterTitle.AutoSize = true;
             this.lbl_DateFilterTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_DateFilterTitle.Location = new System.Drawing.Point(-124, 34);
-            this.lbl_DateFilterTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_DateFilterTitle.Location = new System.Drawing.Point(-142, 39);
+            this.lbl_DateFilterTitle.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbl_DateFilterTitle.Name = "lbl_DateFilterTitle";
-            this.lbl_DateFilterTitle.Size = new System.Drawing.Size(88, 13);
+            this.lbl_DateFilterTitle.Size = new System.Drawing.Size(101, 15);
             this.lbl_DateFilterTitle.TabIndex = 46;
             this.lbl_DateFilterTitle.Text = "篩選特定日期:";
             // 
@@ -274,10 +280,11 @@
             this.lbl_IdentityTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_IdentityTitle.AutoSize = true;
             this.lbl_IdentityTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_IdentityTitle.Location = new System.Drawing.Point(904, 85);
-            this.lbl_IdentityTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_IdentityTitle.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lbl_IdentityTitle.Location = new System.Drawing.Point(1033, 98);
+            this.lbl_IdentityTitle.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbl_IdentityTitle.Name = "lbl_IdentityTitle";
-            this.lbl_IdentityTitle.Size = new System.Drawing.Size(49, 13);
+            this.lbl_IdentityTitle.Size = new System.Drawing.Size(77, 25);
             this.lbl_IdentityTitle.TabIndex = 47;
             this.lbl_IdentityTitle.Text = "流水號:";
             // 
@@ -287,21 +294,22 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.dataGridView_Payment.BackgroundColor = System.Drawing.Color.Snow;
             this.dataGridView_Payment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_Payment.Location = new System.Drawing.Point(13, 73);
-            this.dataGridView_Payment.Margin = new System.Windows.Forms.Padding(5);
+            this.dataGridView_Payment.Location = new System.Drawing.Point(15, 84);
+            this.dataGridView_Payment.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.dataGridView_Payment.Name = "dataGridView_Payment";
             this.dataGridView_Payment.RowHeadersWidth = 51;
             this.dataGridView_Payment.RowTemplate.Height = 27;
-            this.dataGridView_Payment.Size = new System.Drawing.Size(834, 598);
+            this.dataGridView_Payment.Size = new System.Drawing.Size(953, 690);
             this.dataGridView_Payment.TabIndex = 45;
             this.dataGridView_Payment.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Payment_CellClick);
             this.dataGridView_Payment.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Payment_CellDoubleClick);
             // 
             // FrmCoach_Payment
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1336, 685);
+            this.BackColor = System.Drawing.Color.LightBlue;
+            this.ClientSize = new System.Drawing.Size(1527, 790);
             this.Controls.Add(this.dateTimePicker_Filter);
             this.Controls.Add(this.lbl_Date);
             this.Controls.Add(this.lbl_DateTitle);
