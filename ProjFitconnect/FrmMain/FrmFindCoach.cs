@@ -161,35 +161,34 @@ namespace Revised_V1._1
 
         private void ShowAllTrackedCoaches()
         {
-            using (gymEntities db = new gymEntities())
+            gymEntities db = new gymEntities();
+            var query = from i in db.tIdentity
+                        join c in db.tcoach_info_id on i.id equals c.coach_id
+                        join ce in db.tcoach_expert on i.id equals ce.coach_id into expertGroup
+                        from expert in expertGroup.DefaultIfEmpty()
+                        join cs in db.tclasses on (expert != null ? expert.class_id : default(int?)) equals cs.class_id into expertiseGroup
+                        from expertise in expertiseGroup.DefaultIfEmpty()
+                        join f in db.tmember_follow on i.id equals f.coach_id into followGroup
+                        from follow in followGroup.DefaultIfEmpty()
+                        where i.role_id == 2 &&
+                              (follow == null || (follow.status_id == 1 && follow.member_id == this.identity.id))
+                        select new { Identity = i, CoachInfo = c, Expertise = expertise, FollowInfo = follow };
+
+            flowLayoutPanel1.Controls.Clear();
+
+            if (query != null)
+                return;
+
+            foreach (var item in query)
             {
-                var query = from i in db.tIdentity
-                            join c in db.tcoach_info_id on i.id equals c.coach_id
-                            join ce in db.tcoach_expert on i.id equals ce.coach_id into expertGroup
-                            from expert in expertGroup.DefaultIfEmpty()
-                                //join cs in db.tclasses on expert.class_id equals cs.class_id into expertiseGroup
-                            join cs in db.tclasses on (expert != null ? expert.class_id : default(int?)) equals cs.class_id into expertiseGroup
-                            from expertise in expertiseGroup.DefaultIfEmpty()
-                            join f in db.tmember_follow on i.id equals f.coach_id into followGroup
-                            from follow in followGroup.DefaultIfEmpty()
-                            where i.role_id == 2 &&
-                                  follow.status_id == 1 &&
-                                  follow.member_id == this.identity.id
-                            select new { Identity = i, CoachInfo = c, Expertise = expertise, FollowInfo = follow };
-
-                flowLayoutPanel1.Controls.Clear();
-
-                foreach (var item in query)
-                {
-                    CoachBox cb = new CoachBox();
-                    cb.Width = flowLayoutPanel1.Width / 2;
-                    cb.Height = 200;
-                    cb.Identity = item.Identity;
-                    cb.cid = item.CoachInfo;
-                    cb.cst = item.Expertise;
-                    cb.followInfo = item.FollowInfo;
-                    flowLayoutPanel1.Controls.Add(cb);
-                }
+                CoachBox cb = new CoachBox();
+                cb.Width = flowLayoutPanel1.Width / 2;
+                cb.Height = 200;
+                cb.Identity = item.Identity;
+                cb.cid = item.CoachInfo;
+                cb.cst = item.Expertise;
+                cb.followInfo = item.FollowInfo;
+                flowLayoutPanel1.Controls.Add(cb);
             }
         }
 

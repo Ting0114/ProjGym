@@ -373,5 +373,17 @@ namespace ProjGym
             this.splitContainer1.Panel2.Controls.Add(f);
             f.Show();
         }
+
+        private void 場地付款資訊ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.splitContainer1.Panel2.Controls.Clear();
+            FrmCoach_Payment f = new FrmCoach_Payment();
+            f.MdiParent = this;
+            f.TopLevel = false;
+            f.identity = this.identity;
+            f.FormBorderStyle = FormBorderStyle.None;
+            this.splitContainer1.Panel2.Controls.Add(f);
+            f.Show();
+        }
     }
 }
