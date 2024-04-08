@@ -59,7 +59,7 @@ namespace ProjGym
         {
             this.splitContainer1.Panel2.Controls.Clear();
             FrmEditMemberRegister f = new FrmEditMemberRegister();
-            f.member = this.identity;
+            f.member = this.identity; 
             f.afterEdit += this.showinfo;
             f.TopLevel = false;
             f.FormBorderStyle = FormBorderStyle.None;
@@ -243,7 +243,7 @@ namespace ProjGym
 
         private void 開課審核ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            closeCurrentForm();
+            this.splitContainer1.Panel2.Controls.Clear();
             FrmAdmin_ClassUpdate f = new FrmAdmin_ClassUpdate();
             f.MdiParent = this;
             f.TopLevel = false;
@@ -351,10 +351,11 @@ namespace ProjGym
             this.splitContainer1.Panel2.Controls.Clear();
             FrmAdmin_Payment f = new FrmAdmin_Payment();
             f.MdiParent = this;
+            f.Identity = this.identity; 
             f.TopLevel = false;
-            f.FormBorderStyle = FormBorderStyle.None;
-            f.Dock = DockStyle.Fill;
-            f.Visible = true;
+            f.FormBorderStyle = FormBorderStyle.None; 
+            this.splitContainer1.Panel2.Controls.Add(f);
+            f.Show();
 
             this.splitContainer1.Panel2.Controls.Add(f);
         }

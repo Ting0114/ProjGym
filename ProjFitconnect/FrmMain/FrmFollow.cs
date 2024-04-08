@@ -21,7 +21,6 @@ namespace Gym
         private tmember_follow _member_follow;
         private tIdentity _identity;
         private int _id;
-        private int _mid;
         public tmember_follow member_follow
         {
             get
@@ -48,15 +47,10 @@ namespace Gym
             btnSave.Visible = true;
             cbStar.Visible = true;
             lblRate.Visible = true;
+            label5.Visible = true;
         }
-
         private void FrmFollow_Load(object sender, EventArgs e)
         {
-            cbStar.Items.Add("1");
-            cbStar.Items.Add("2");
-            cbStar.Items.Add("3");
-            cbStar.Items.Add("4");
-            cbStar.Items.Add("5");
             gymEntities db = new gymEntities();
             cbCoach.Items.Clear();
             var name = from n in db.tIdentity
@@ -67,62 +61,65 @@ namespace Gym
 
         private void btnFollow_Click(object sender, EventArgs e)
         {
+            label2.Text = string.Empty;
+            if (checkcoach() == -1) { return; }
             gymEntities db = new gymEntities();
-            tmember_follow MemberFollow = new tmember_follow();
             int findID = this.identity.id;
-            var member = from m in db.tIdentity
-                         where m.role_id == findID
-                         select m;
-            MemberFollow.member_id = findID;
-            MemberFollow.status_id = 1;
-            member_follow = MemberFollow;
 
-            if (this.member_follow != null)
+            // 尋找目前使用者正在追蹤的教練
+            var existingFollow = db.tmember_follow.FirstOrDefault(f => f.member_id == findID && f.status_id == 1);
+
+            if (existingFollow != null)
             {
-                db.tmember_follow.Add(this.member_follow);
+                // 使用者已經追蹤了該教練，執行取消追蹤操作
+                db.tmember_follow.Remove(existingFollow);
                 db.SaveChanges();
-                MessageBox.Show("追蹤成功");
+                MessageBox.Show("取消追踪");
             }
             else
             {
-                MessageBox.Show("Member follow object is null. Unable to proceed with the operation.");
+                // 使用者尚未追蹤該教練，執行追蹤操作
+                tmember_follow MemberFollow = new tmember_follow();
+                MemberFollow.member_id = findID;
+                MemberFollow.status_id = 1;
+                MemberFollow.coach_id = _id;
+                db.tmember_follow.Add(MemberFollow);
+                db.SaveChanges();
+                MessageBox.Show("追踪成功");
             }
+
         }
 
         private void btnBlack_Click(object sender, EventArgs e)
         {
+            label2.Text = string.Empty;
+            if (checkcoach() == -1) { return; }
             gymEntities db = new gymEntities();
-            tmember_follow MemberFollow = new tmember_follow();
             int findID = this.identity.id;
-            var member = from m in db.tIdentity
-                         where m.role_id == findID
-                         select m;
-            MemberFollow.member_id = findID;
-            MemberFollow.status_id = 2;
-            member_follow = MemberFollow;
-            findID = _mid;
-            if (this.member_follow != null)
-            {
-                db.tmember_follow.Add(this.member_follow);
-                db.SaveChanges();
-                MessageBox.Show("已加入黑名單");
-            }
-            //if (this.member_follow != null)
-            //{
 
-            //    db.tmember_follow.Remove(this.member_follow);
-            //    db.SaveChanges();
-            //    MessageBox.Show("已刪除黑名單");
-            //}
+            var existingBlacklist = db.tmember_follow.FirstOrDefault(f => f.member_id == findID && f.status_id == 2);
+
+            if (existingBlacklist != null)
+            {
+                db.tmember_follow.Remove(existingBlacklist);
+                db.SaveChanges();
+                MessageBox.Show("已移除黑名單");
+            }
             else
             {
-                MessageBox.Show("Member follow object is null. Unable to proceed with the operation.");
+                tmember_follow MemberFollow = new tmember_follow();
+                MemberFollow.member_id = findID;
+                MemberFollow.status_id = 2;
+                MemberFollow.coach_id = _id;
+                db.tmember_follow.Add(MemberFollow);
+                db.SaveChanges();
+                MessageBox.Show("已加入黑名單");
             }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            label2.Text = label3.Text = string.Empty;
+            label2.Text = label3.Text = label4.Text =string.Empty;
             if (check() == -1) { return; }
             gymEntities db = new gymEntities();
             tmember_follow t = new tmember_follow();
@@ -140,6 +137,18 @@ namespace Gym
             }
             else
                 return;
+        }
+        private int checkcoach()
+        {
+            bool hasError = false;
+            if (cbCoach.SelectedIndex == -1)
+            {
+                label2.Text = "請選擇教練"; hasError = true;
+            }
+            if (hasError)
+                return -1;
+            else
+                return 0;
         }
         private int check()
         {

@@ -15,6 +15,7 @@ namespace mid_Coonect.Tools
     public delegate void DMore(CoachBox p);
     public partial class CoachBox : UserControl
     {
+        public tmember_follow followInfo { get; set; }
         public event DMore learnMore;
         public event DMore showmember;
         private tclasses _cst;

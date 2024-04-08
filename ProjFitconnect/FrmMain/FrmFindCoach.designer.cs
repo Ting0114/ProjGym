@@ -39,6 +39,7 @@
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.checkBox8 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
@@ -54,6 +55,7 @@
             // 
             // splitContainer2.Panel1
             // 
+            this.splitContainer2.Panel1.Controls.Add(this.checkBox8);
             this.splitContainer2.Panel1.Controls.Add(this.checkBox7);
             this.splitContainer2.Panel1.Controls.Add(this.checkBox6);
             this.splitContainer2.Panel1.Controls.Add(this.flowLayoutPanel2);
@@ -79,7 +81,7 @@
             this.checkBox7.Location = new System.Drawing.Point(76, 292);
             this.checkBox7.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(68, 27);
+            this.checkBox7.Size = new System.Drawing.Size(58, 23);
             this.checkBox7.TabIndex = 8;
             this.checkBox7.Text = "更多";
             this.checkBox7.UseVisualStyleBackColor = true;
@@ -89,10 +91,10 @@
             // 
             this.checkBox6.AutoSize = true;
             this.checkBox6.Font = new System.Drawing.Font("微軟正黑體", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.checkBox6.Location = new System.Drawing.Point(76, 74);
+            this.checkBox6.Location = new System.Drawing.Point(76, 57);
             this.checkBox6.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(68, 27);
+            this.checkBox6.Size = new System.Drawing.Size(58, 23);
             this.checkBox6.TabIndex = 7;
             this.checkBox6.Text = "所有";
             this.checkBox6.UseVisualStyleBackColor = true;
@@ -114,7 +116,7 @@
             this.checkBox5.Location = new System.Drawing.Point(76, 260);
             this.checkBox5.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(68, 27);
+            this.checkBox5.Size = new System.Drawing.Size(58, 23);
             this.checkBox5.TabIndex = 5;
             this.checkBox5.Text = "無氧";
             this.checkBox5.UseVisualStyleBackColor = true;
@@ -127,7 +129,7 @@
             this.checkBox4.Location = new System.Drawing.Point(76, 229);
             this.checkBox4.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(68, 27);
+            this.checkBox4.Size = new System.Drawing.Size(58, 23);
             this.checkBox4.TabIndex = 4;
             this.checkBox4.Text = "有氧";
             this.checkBox4.UseVisualStyleBackColor = true;
@@ -147,10 +149,10 @@
             // 
             this.checkBox3.AutoSize = true;
             this.checkBox3.Font = new System.Drawing.Font("微軟正黑體", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.checkBox3.Location = new System.Drawing.Point(76, 170);
+            this.checkBox3.Location = new System.Drawing.Point(76, 150);
             this.checkBox3.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(68, 27);
+            this.checkBox3.Size = new System.Drawing.Size(58, 23);
             this.checkBox3.TabIndex = 2;
             this.checkBox3.Text = "其他";
             this.checkBox3.UseVisualStyleBackColor = true;
@@ -160,10 +162,10 @@
             // 
             this.checkBox2.AutoSize = true;
             this.checkBox2.Font = new System.Drawing.Font("微軟正黑體", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.checkBox2.Location = new System.Drawing.Point(76, 136);
+            this.checkBox2.Location = new System.Drawing.Point(76, 119);
             this.checkBox2.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(68, 27);
+            this.checkBox2.Size = new System.Drawing.Size(58, 23);
             this.checkBox2.TabIndex = 1;
             this.checkBox2.Text = "女性";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -173,10 +175,10 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("微軟正黑體", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.checkBox1.Location = new System.Drawing.Point(76, 103);
+            this.checkBox1.Location = new System.Drawing.Point(76, 88);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(68, 27);
+            this.checkBox1.Size = new System.Drawing.Size(58, 23);
             this.checkBox1.TabIndex = 0;
             this.checkBox1.Text = "男性";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -192,9 +194,22 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(798, 658);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
+            // checkBox8
+            // 
+            this.checkBox8.AutoSize = true;
+            this.checkBox8.Font = new System.Drawing.Font("微軟正黑體", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.checkBox8.Location = new System.Drawing.Point(76, 181);
+            this.checkBox8.Margin = new System.Windows.Forms.Padding(4);
+            this.checkBox8.Name = "checkBox8";
+            this.checkBox8.Size = new System.Drawing.Size(58, 23);
+            this.checkBox8.TabIndex = 9;
+            this.checkBox8.Text = "追蹤";
+            this.checkBox8.UseVisualStyleBackColor = true;
+            this.checkBox8.CheckedChanged += new System.EventHandler(this.checkBox8_CheckedChanged);
+            // 
             // FrmFindCoach
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(1029, 658);
@@ -228,5 +243,6 @@
         private System.Windows.Forms.CheckBox checkBox4;
         private System.Windows.Forms.CheckBox checkBox6;
         private System.Windows.Forms.CheckBox checkBox7;
+        private System.Windows.Forms.CheckBox checkBox8;
     }
 }

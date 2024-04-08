@@ -19,7 +19,9 @@ namespace Revised_V1._1
         {
             InitializeComponent();
         }
-        private bool _ischeck = true; 
+        public tIdentity identity { get; set; }
+
+        private bool _ischeck = true;
         private void CheckBoxOxygenSelected(int n)
         {
             gymEntities db = new gymEntities();
@@ -29,8 +31,8 @@ namespace Revised_V1._1
                         from expert in expertGroup.DefaultIfEmpty()
                         join cs in db.tclasses on expert.class_id equals cs.class_id into expertiseGroup
                         from expertise in expertiseGroup.DefaultIfEmpty()
-                        where expertise.class_sort1_id==n
-                        select new { Identity = i, CoachInfo = c, Expertise = expertise }; 
+                        where expertise.class_sort1_id == n
+                        select new { Identity = i, CoachInfo = c, Expertise = expertise };
             foreach (var item in query)
             {
                 CoachBox cb = new CoachBox();
@@ -46,7 +48,7 @@ namespace Revised_V1._1
             }
         }
         private void CheckBoxGenderSelected(int g)
-        { 
+        {
             gymEntities db = new gymEntities();
             var query = from i in db.tIdentity
                         join c in db.tcoach_info_id on i.id equals c.coach_id
@@ -54,7 +56,7 @@ namespace Revised_V1._1
                         from expert in expertGroup.DefaultIfEmpty()
                         join cs in db.tclasses on expert.class_id equals cs.class_id into expertiseGroup
                         from expertise in expertiseGroup.DefaultIfEmpty()
-                        where i.gender_id==g
+                        where i.gender_id == g
                         select new { Identity = i, CoachInfo = c, Expertise = expertise };
 
             foreach (var item in query)
@@ -74,15 +76,15 @@ namespace Revised_V1._1
 
         private void LearnMore(CoachBox p)
         {
-            gymEntities db=new gymEntities();
+            gymEntities db = new gymEntities();
             tIdentity pid = db.tIdentity.FirstOrDefault(x => x.id == p.Identity.id);
             if (pid == null) return;
-            tcoach_info_id cid = db.tcoach_info_id.FirstOrDefault(y=>y.coach_id==p.cid.coach_id);
+            tcoach_info_id cid = db.tcoach_info_id.FirstOrDefault(y => y.coach_id == p.cid.coach_id);
             if (cid == null) return;
-            tclasses cl = db.tclasses.FirstOrDefault(z=>z.class_id==p.cst.class_id);
+            tclasses cl = db.tclasses.FirstOrDefault(z => z.class_id == p.cst.class_id);
             if (cl == null) return;
             FrmCoachInfo f = new FrmCoachInfo
-            {pid = pid, cid = cid, cl = cl,}; 
+            { pid = pid, cid = cid, cl = cl, };
             f.Show();
         }
 
@@ -125,8 +127,69 @@ namespace Revised_V1._1
                 CheckBox cb = new CheckBox();
                 cb.Text = r.class_name;
                 cb.Tag = r.class_name;
-                cb.CheckStateChanged += Cb_CheckStateChanged; 
+                cb.CheckStateChanged += Cb_CheckStateChanged;
                 flowLayoutPanel2.Controls.Add(cb);
+            }
+        }
+
+        private void ShowAllCoachList()
+        {
+            gymEntities db = new gymEntities();
+            var query = from i in db.tIdentity
+                        join c in db.tcoach_info_id on i.id equals c.coach_id
+                        join ce in db.tcoach_expert on i.id equals ce.coach_id into expertGroup
+                        from expert in expertGroup.DefaultIfEmpty()
+                        join cs in db.tclasses on expert.class_id equals cs.class_id into expertiseGroup
+                        from expertise in expertiseGroup.DefaultIfEmpty()
+                        where i.role_id == 2
+                        select new { Identity = i, CoachInfo = c, Expertise = expertise };
+
+            foreach (var item in query)
+            {
+                CoachBox cb = new CoachBox();
+                cb.Width = flowLayoutPanel1.Width * 3 / 4;
+                cb.Height = 180;
+                cb.Identity = item.Identity;
+                cb.cid = item.CoachInfo;
+                cb.cst = item.Expertise;
+                cb.learnMore += this.LearnMore;
+                cb.showmember += this.ShowMember;
+                if (flowLayoutPanel1.Controls.Equals(cb)) return;
+                flowLayoutPanel1.Controls.Add(cb);
+            }
+        }
+
+        private void ShowAllTrackedCoaches()
+        {
+            using (gymEntities db = new gymEntities())
+            {
+                var query = from i in db.tIdentity
+                            join c in db.tcoach_info_id on i.id equals c.coach_id
+                            join ce in db.tcoach_expert on i.id equals ce.coach_id into expertGroup
+                            from expert in expertGroup.DefaultIfEmpty()
+                                //join cs in db.tclasses on expert.class_id equals cs.class_id into expertiseGroup
+                            join cs in db.tclasses on (expert != null ? expert.class_id : default(int?)) equals cs.class_id into expertiseGroup
+                            from expertise in expertiseGroup.DefaultIfEmpty()
+                            join f in db.tmember_follow on i.id equals f.coach_id into followGroup
+                            from follow in followGroup.DefaultIfEmpty()
+                            where i.role_id == 2 &&
+                                  follow.status_id == 1 &&
+                                  follow.member_id == this.identity.id
+                            select new { Identity = i, CoachInfo = c, Expertise = expertise, FollowInfo = follow };
+
+                flowLayoutPanel1.Controls.Clear();
+
+                foreach (var item in query)
+                {
+                    CoachBox cb = new CoachBox();
+                    cb.Width = flowLayoutPanel1.Width / 2;
+                    cb.Height = 200;
+                    cb.Identity = item.Identity;
+                    cb.cid = item.CoachInfo;
+                    cb.cst = item.Expertise;
+                    cb.followInfo = item.FollowInfo;
+                    flowLayoutPanel1.Controls.Add(cb);
+                }
             }
         }
 
@@ -160,7 +223,8 @@ namespace Revised_V1._1
                     flowLayoutPanel1.Controls.Add(cb);
                 }
             }
-            else {
+            else
+            {
                 for (int i = flowLayoutPanel1.Controls.Count - 1; i >= 0; i--)
                 {
                     if (flowLayoutPanel1.Controls[i] is CoachBox cb && cb.cst.class_name.Equals(chk.Tag.ToString()))
@@ -172,32 +236,6 @@ namespace Revised_V1._1
             }
         }
 
-        private void ShowAllCoachList()
-        { 
-            gymEntities db = new gymEntities(); 
-            var query = from i in db.tIdentity
-                        join c in db.tcoach_info_id on i.id equals c.coach_id
-                        join ce in db.tcoach_expert on i.id equals ce.coach_id into expertGroup
-                        from expert in expertGroup.DefaultIfEmpty()
-                        join cs in db.tclasses on expert.class_id equals cs.class_id into expertiseGroup
-                        from expertise in expertiseGroup.DefaultIfEmpty()
-                        where i.role_id == 2
-                        select new { Identity = i, CoachInfo = c, Expertise = expertise };
-
-            foreach (var item in query)
-            {
-                CoachBox cb = new CoachBox();
-                cb.Width = flowLayoutPanel1.Width *3/4;
-                cb.Height = 180;
-                cb.Identity = item.Identity;
-                cb.cid = item.CoachInfo;
-                cb.cst = item.Expertise;
-                cb.learnMore += this.LearnMore;
-                cb.showmember += this.ShowMember;
-                if (flowLayoutPanel1.Controls.Equals(cb)) return;
-                flowLayoutPanel1.Controls.Add(cb);
-            } 
-        }
         private void FrmFindCoach_Load(object sender, EventArgs e)
         {
             //CreateClasssortCheckBox();
@@ -208,26 +246,26 @@ namespace Revised_V1._1
         {
             int g = 1;
             if (checkBox1.Checked) { CheckBoxGenderSelected(g); }
-            else UndoGender(g); 
+            else UndoGender(g);
         }
 
         private void checkBox2_CheckStateChanged(object sender, EventArgs e)
         {
             int g = 2;
-            if (checkBox2.Checked){ CheckBoxGenderSelected(g); }
+            if (checkBox2.Checked) { CheckBoxGenderSelected(g); }
             else { UndoGender(g); }
         }
 
         private void checkBox3_CheckStateChanged(object sender, EventArgs e)
         {
             int g = 3;
-            if(checkBox3.Checked) CheckBoxGenderSelected(g);
+            if (checkBox3.Checked) CheckBoxGenderSelected(g);
             else UndoGender(g);
         }
 
         private void checkBox6_CheckStateChanged(object sender, EventArgs e)
         {
-            if (checkBox6.Checked)ShowAllCoachList();else this.flowLayoutPanel1.Controls.Clear();
+            if (checkBox6.Checked) ShowAllCoachList(); else this.flowLayoutPanel1.Controls.Clear();
         }
 
         private void checkBox4_CheckStateChanged(object sender, EventArgs e)
@@ -246,8 +284,20 @@ namespace Revised_V1._1
 
         private void checkBox7_CheckStateChanged(object sender, EventArgs e)
         {
-            if (checkBox7.Checked){ CreateClasssortCheckBox(); flowLayoutPanel2.Visible = true; }
+            if (checkBox7.Checked) { CreateClasssortCheckBox(); flowLayoutPanel2.Visible = true; }
             else flowLayoutPanel2.Visible = false;
-        } 
+        }
+
+        private void checkBox8_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox8.Checked)
+            {
+                ShowAllTrackedCoaches();
+            }
+            else
+            {
+                flowLayoutPanel1.Controls.Clear();
+            }
+        }
     }
 }
