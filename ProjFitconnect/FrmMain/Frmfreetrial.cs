@@ -85,8 +85,20 @@ namespace FrmMain
         private void label2_Click(object sender, EventArgs e)
         {
             if (this.identity == null) { MessageBox.Show("請登入會員"); return; }
-            //MessageBox.Show(""+identity);
-            gymEntities db=new gymEntities();
+            gymEntities db = new gymEntities();
+            int index = this.identity.id;
+            tIdentity i = db.tIdentity.FirstOrDefault(x => x.id == index);
+            if (i.role_id != 1) { MessageBox.Show("您的身分並非會員, 無法預約課程"); return; }
+            tclass_reserve cr = new tclass_reserve();
+            //cr.class_schedule_id = p.ts.class_schedule_id;
+            cr.member_id = index;
+            cr.payment_status = false;
+            cr.reserve_status = true;
+            db.tclass_reserve.Add(cr);
+            //if (afterCourseSubmit() == 0){
+            //db.SaveChanges();
+            //MessageBox.Show("   課程預約成功!"+"\n請於期限內完成繳費"); 
+            //} else return;
             if (comboBox1.Text == "" || comboBox2.Text == "" || comboBox3.Text == "")
                 MessageBox.Show("預約失敗");
             else MessageBox.Show("預約成功");
