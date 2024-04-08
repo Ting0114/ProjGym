@@ -66,26 +66,23 @@ namespace Gym
             gymEntities db = new gymEntities();
             int findID = this.identity.id;
 
-            // 尋找目前使用者正在追蹤的教練
             var existingFollow = db.tmember_follow.FirstOrDefault(f => f.member_id == findID && f.status_id == 1);
 
             if (existingFollow != null)
             {
-                // 使用者已經追蹤了該教練，執行取消追蹤操作
                 db.tmember_follow.Remove(existingFollow);
                 db.SaveChanges();
-                MessageBox.Show("取消追踪");
+                MessageBox.Show("取消追蹤");
             }
             else
             {
-                // 使用者尚未追蹤該教練，執行追蹤操作
                 tmember_follow MemberFollow = new tmember_follow();
                 MemberFollow.member_id = findID;
                 MemberFollow.status_id = 1;
                 MemberFollow.coach_id = _id;
                 db.tmember_follow.Add(MemberFollow);
                 db.SaveChanges();
-                MessageBox.Show("追踪成功");
+                MessageBox.Show("追蹤成功");
             }
 
         }
