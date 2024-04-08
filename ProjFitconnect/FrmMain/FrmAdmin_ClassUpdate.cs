@@ -29,9 +29,9 @@ namespace mid_Coonect
                 _course.class_sort1_id = Convert.ToInt32(cb_Sort1.Text);
                 _course.class_sort2_id = Convert.ToInt32(cb_Sort2.Text);
                 _course.limited_gender = Convert.ToInt32(cb_Limit.Text);
+                //_course.class_status = Convert.ToInt32(cb_Status.Text);
                 _course.class_name = txt_ClassName.Text;
                 _course.class_introduction = this.txt_Introduction.Text;
-
                 _course.class_photo = _imagepath;
                 return _course;
             }
@@ -42,6 +42,7 @@ namespace mid_Coonect
                 cb_Sort1.Text = _course.class_sort1_id.ToString();
                 cb_Sort2.Text = _course.class_sort2_id.ToString();
                 cb_Limit.Text = _course.limited_gender.ToString();
+                //cb_Status.Text = _course.class_status.ToString();
                 txt_ClassName.Text = _course.class_name;
                 txt_Introduction.Text = _course.class_introduction;
                 _imagepath = _course.class_photo;
@@ -91,6 +92,7 @@ namespace mid_Coonect
         {
             gymEntities db = new gymEntities();
             var classsort = from r in db.tclasses
+                            join c in db.tclass_status_detail on r.class_status equals c.class_status_id
                             select new
                             {
                                 編號 = r.class_id,
@@ -99,10 +101,11 @@ namespace mid_Coonect
                                 分類 = r.class_sort2_id,
                                 照片 = r.class_photo,
                                 介紹 = r.class_introduction,
-                                開放 = r.class_status,
+                                開放 = c.class_status_discribe,
                                 限制 = r.limited_gender
                             };
             this.dataGridView_ClassSortList.DataSource = classsort.ToList();
+            this.dataGridView_ClassSortList.Columns[6].Width = 200;
             this.dataGridView_ClassSortList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
         }
 
@@ -120,6 +123,9 @@ namespace mid_Coonect
             var limits = from limit in gymEntities.tclass_limit_details select limit;
             foreach (var limit in limits)
                 this.cb_Limit.Items.Add(limit.class_limited_id);
+            var statuses = from status in gymEntities.tmember_status_details select status;
+            foreach (var status in statuses)
+                this.cb_Status.Items.Add(status.status_id);
             ShowdbCalss();
             dbSelect(1);
         }
@@ -134,6 +140,7 @@ namespace mid_Coonect
             cb_Sort1.Text = classsort.class_sort1_id.ToString();
             cb_Sort2.Text = classsort.class_sort2_id.ToString();
             cb_Limit.Text = classsort.limited_gender.ToString();
+            cb_Status.Text = classsort.class_status.ToString();
             txt_ClassName.Text = classsort.class_name;
             txt_Introduction.Text = classsort.class_introduction;
             _imagepath = classsort.class_photo;
@@ -175,7 +182,7 @@ namespace mid_Coonect
             classsort.limited_gender = Convert.ToInt32(cb_Limit.Text);
             classsort.class_name = txt_ClassName.Text;
             classsort.class_introduction = txt_Introduction.Text;
-
+            classsort.class_status = Convert.ToInt32(cb_Status.Text);
             if (!string.IsNullOrEmpty(_imagepath))
             {
                 string path = Application.StartupPath + "\\ClassPic";
@@ -187,6 +194,10 @@ namespace mid_Coonect
         }
         private void DataGridView_ClassSortList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex == -1)
+            {
+                return;
+            }
             _index = (int)dataGridView_ClassSortList.Rows[e.RowIndex].Cells[0].Value;
             dbSelect(_index);
         }
@@ -244,5 +255,6 @@ namespace mid_Coonect
             int total = TotalAmount();
             this.lbl_CurrentIndex.Text = $"{_index}/{total}";
         }
+
     }
 }

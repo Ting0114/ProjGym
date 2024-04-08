@@ -30,6 +30,7 @@ namespace FrmMain
         public int Max_student { get; set; }
         public int class_status_id { get; set; }
         public decimal class_payment { get; set; }
+        public bool coach_payment { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tclass_reserve> tclass_reserve { get; set; }

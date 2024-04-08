@@ -38,7 +38,6 @@ namespace FrmMain
             this.cbSort1.DropDownStyle = ComboBoxStyle.DropDownList;
             this.cbSort2.DropDownStyle = ComboBoxStyle.DropDownList;
             this.cbLm.DropDownStyle = ComboBoxStyle.DropDownList;
-
             cbSort1.Items.Clear();
             gymEntities db = new gymEntities();
             var srt1s = from a in db.tclass_sort_有氧 select a;
@@ -91,7 +90,6 @@ namespace FrmMain
             t.class_name = txtClassName.Text;
             t.class_introduction = txtInfo.Text;
             t.limited_gender = this.cbLm.SelectedIndex;
-            t.class_status = true;
             db.tclasses.Add(t);
             if (afterCourseSubmit() == 0)
             {

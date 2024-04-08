@@ -23,7 +23,7 @@ namespace FrmMain
         {
             this.checkBox1.Text = "會員";
             this.checkBox2.Text = "教練";
-            this.checkBox3.Text = "教練：未審核";
+            this.checkBox3.Text = "全部清單";
             this.checkBox4.Text = "管理員";
             showdata();
         }
@@ -41,7 +41,7 @@ namespace FrmMain
                               名稱 = a.name,
                               電話 = a.phone,
                               email = a.e_mail,
-                              密碼 = a.password,
+                              //密碼 = a.password,
                               照片 = a.photo,
                               生日 = a.birthday,
                               地址 = a.address,
@@ -66,7 +66,7 @@ namespace FrmMain
                               名稱 = a.name,
                               電話 = a.phone,
                               email = a.e_mail,
-                              密碼 = a.password,
+                              //密碼 = a.password,
                               照片 = a.photo,
                               生日 = a.birthday,
                               地址 = a.address,
@@ -91,7 +91,7 @@ namespace FrmMain
                               名稱 = a.name,
                               電話 = a.phone,
                               email = a.e_mail,
-                              密碼 = a.password,
+                              //密碼 = a.password,
                               照片 = a.photo,
                               生日 = a.birthday,
                               地址 = a.address,
@@ -114,29 +114,22 @@ namespace FrmMain
                          {
                              編號 = a.id,
                              名稱 = a.name,
-                             密碼 = a.password,
+                             //密碼 = a.password,
                              創建日期 = a.birthday,
                              是否啟用 = a.activated,
                          }; ;
             this.dataGridView1.DataSource = admins.ToList();
         }
+        private void FrmAdmin_Checkmember_Load(object sender, EventArgs e)
+        {
 
-        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        }
+
+        private void checkBox3_CheckedChanged_1(object sender, EventArgs e)
         {
             if (checkBox3.CheckState != CheckState.Checked)
                 return;
-            this.dataGridView1.Controls.Clear();
-
-            gymEntities db = new gymEntities();
-            var coaches = from a in db.tclass_schedule
-                          from b in db.tIdentity
-                          where (a.class_status_id != 2) && (a.coach_id == b.id)
-                          select new
-                          {
-                              名稱 = b.name,
-                              編號 = a.coach_id
-                          };
-            this.dataGridView1.DataSource = coaches.ToList();
+            init();
         }
     }
 }

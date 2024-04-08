@@ -119,12 +119,14 @@ namespace ProjGym
 
         private void dataGridView_Payment_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex == -1) return;
             if (e.ColumnIndex == 3)
             {
                 FrmEditCoachRegister frmCoach_EditRegister = new FrmEditCoachRegister();
                 gymEntities db = new gymEntities();
                 string name = this.dataGridView_Payment.Rows[e.RowIndex].Cells[3].FormattedValue.ToString();
                 var coach = db.tIdentity.FirstOrDefault(x => x.name.Equals(name));
+                frmCoach_EditRegister.identity = coach;
                 frmCoach_EditRegister.coach = coach;
                 frmCoach_EditRegister.Text = "查看會員資料";
                 frmCoach_EditRegister.name.ReadOnly = true;

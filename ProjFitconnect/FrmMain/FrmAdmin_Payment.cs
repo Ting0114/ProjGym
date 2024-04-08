@@ -50,6 +50,7 @@ namespace ProjGym
 
         private void dataGridView_Payment_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex == -1) return;
             if (e.ColumnIndex == 3)
             {
                 FrmEditMemberRegister f = new FrmEditMemberRegister();

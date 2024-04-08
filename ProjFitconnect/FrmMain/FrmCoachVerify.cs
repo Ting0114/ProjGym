@@ -101,7 +101,7 @@ namespace FrmMain
             this.dateTimePicker_Birth.Text = y.birthday.ToString();
             this.tb_Mail.Text = y.e_mail;
             this.tb_Address.Text = y.address;
-            this.tb_Password.Text = y.password;
+            this.tb_Password.Text = "****";
             this._imagepath = y.photo;
             if (!string.IsNullOrEmpty(_imagepath))
             {

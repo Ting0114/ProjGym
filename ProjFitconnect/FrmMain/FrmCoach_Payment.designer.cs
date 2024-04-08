@@ -181,7 +181,7 @@
             this.cb_ReserveStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cb_ReserveStatus.FormattingEnabled = true;
             this.cb_ReserveStatus.Location = new System.Drawing.Point(1157, 480);
-            this.cb_ReserveStatus.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.cb_ReserveStatus.Margin = new System.Windows.Forms.Padding(5);
             this.cb_ReserveStatus.Name = "cb_ReserveStatus";
             this.cb_ReserveStatus.Size = new System.Drawing.Size(215, 23);
             this.cb_ReserveStatus.TabIndex = 54;
@@ -205,7 +205,7 @@
             this.cb_PaymentStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cb_PaymentStatus.FormattingEnabled = true;
             this.cb_PaymentStatus.Location = new System.Drawing.Point(1157, 391);
-            this.cb_PaymentStatus.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.cb_PaymentStatus.Margin = new System.Windows.Forms.Padding(5);
             this.cb_PaymentStatus.Name = "cb_PaymentStatus";
             this.cb_PaymentStatus.Size = new System.Drawing.Size(215, 23);
             this.cb_PaymentStatus.TabIndex = 52;
@@ -295,7 +295,7 @@
             this.dataGridView_Payment.BackgroundColor = System.Drawing.Color.Snow;
             this.dataGridView_Payment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_Payment.Location = new System.Drawing.Point(15, 84);
-            this.dataGridView_Payment.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dataGridView_Payment.Margin = new System.Windows.Forms.Padding(6);
             this.dataGridView_Payment.Name = "dataGridView_Payment";
             this.dataGridView_Payment.RowHeadersWidth = 51;
             this.dataGridView_Payment.RowTemplate.Height = 27;
@@ -330,7 +330,9 @@
             this.Controls.Add(this.lbl_IdentityTitle);
             this.Controls.Add(this.dataGridView_Payment);
             this.Name = "FrmCoach_Payment";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmCoach_Payment";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmCoach_Payment_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Payment)).EndInit();
             this.ResumeLayout(false);
