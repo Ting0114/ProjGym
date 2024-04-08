@@ -95,6 +95,12 @@
     <Compile Include="FrmFollow.designer.cs">
       <DependentUpon>FrmFollow.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmMember_CourseReservationV2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMember_CourseReservationV2.designer.cs">
+      <DependentUpon>FrmMember_CourseReservationV2.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmRateClass.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -357,6 +363,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmFollow.resx">
       <DependentUpon>FrmFollow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMember_CourseReservationV2.resx">
+      <DependentUpon>FrmMember_CourseReservationV2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRateClass.resx">
       <DependentUpon>FrmRateClass.cs</DependentUpon>
