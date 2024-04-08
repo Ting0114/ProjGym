@@ -48,7 +48,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.tb_intro = new System.Windows.Forms.RichTextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cb_Expertise = new System.Windows.Forms.ComboBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Photo)).BeginInit();
@@ -285,14 +285,14 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.comboBox1.Font = new System.Drawing.Font("微軟正黑體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(150, 507);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(101, 31);
-            this.comboBox1.TabIndex = 57;
+            this.cb_Expertise.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cb_Expertise.Font = new System.Drawing.Font("微軟正黑體", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.cb_Expertise.FormattingEnabled = true;
+            this.cb_Expertise.Location = new System.Drawing.Point(150, 507);
+            this.cb_Expertise.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cb_Expertise.Name = "comboBox1";
+            this.cb_Expertise.Size = new System.Drawing.Size(101, 31);
+            this.cb_Expertise.TabIndex = 57;
             // 
             // openFileDialog1
             // 
@@ -316,7 +316,7 @@
             this.BackColor = System.Drawing.Color.LavenderBlush;
             this.ClientSize = new System.Drawing.Size(1012, 959);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cb_Expertise);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.tb_intro);
             this.Controls.Add(this.label9);
@@ -372,7 +372,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.RichTextBox tb_intro;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cb_Expertise;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label label10;
     }

@@ -13,6 +13,7 @@ namespace ProjGym
 {
     public partial class FrmAdmin_Payment : Form
     {
+        public tIdentity Identity { get; set; }
         public FrmAdmin_Payment()
         {
             InitializeComponent();

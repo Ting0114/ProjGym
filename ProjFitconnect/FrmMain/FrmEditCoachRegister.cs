@@ -18,7 +18,20 @@ namespace FrmMain
         public tIdentity identity { get; set; }
         public event DCoachEdit afterEdit;
         private string _filename = string.Empty;
-        private string _ImagePath = "";
+        private string _ImagePath = string.Empty;
+        public tIdentity coach { get; set; }
+        public TextBox name { get { return this.tb_Name; } }
+        public ComboBox gender { get { return this.cb_Gender; } }
+        public TextBox phone { get { return this.tb_Phone; } }
+        public DateTimePicker birth { get { return this.dateTimePicker_Birth; } }
+        public TextBox mail { get { return this.tb_Mail; } }
+        public TextBox address { get { return this.tb_Address; } }
+        public TextBox password { get { return this.tb_Password; } }
+        public PictureBox photo { get { return this.pb_Photo; } }
+        public ComboBox expertise { get { return this.cb_Expertise; } }
+        public Button save { get { return this.btn_Save; } }
+        public Button cancel { get { return this.btn_Cancel; } }
+
         public FrmEditCoachRegister()
         {
             InitializeComponent();
@@ -55,7 +68,7 @@ namespace FrmMain
                             select r;
             foreach (var ex in expername)
             {
-                comboBox1.Items.Add(ex.class_name);
+                cb_Expertise.Items.Add(ex.class_name);
             }
 
             if (!string.IsNullOrEmpty(_filename))
@@ -86,7 +99,7 @@ namespace FrmMain
             int expert = (from EE in db.tclasses
                           join FF in db.tcoach_expert
                           on EE.class_id equals FF.class_id
-                          where EE.class_name == comboBox1.Text
+                          where EE.class_name == cb_Expertise.Text
                           select EE.class_id).FirstOrDefault();  // 使用 FirstOrDefault 獲取第一個匹配的 class_id
 
             if (expert != 0)  // 檢查 expert 是否為 0
