@@ -45,7 +45,6 @@
           <Property Name="Max_student" Type="int" Nullable="false" />
           <Property Name="class_status_id" Type="int" Nullable="false" />
           <Property Name="class_payment" Type="money" Nullable="false" />
-          <Property Name="coach_payment" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="tclass_sort_有氧">
           <Key>
@@ -139,8 +138,7 @@
           <Property Name="birthday" Type="date" Nullable="false" />
           <Property Name="address" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="gender_id" Type="int" Nullable="false" />
-          <Property Name="activated" Type="bit" Nullable="false" />
-          <Property Name="payment" Type="money" />
+          <Property Name="activated" Type="bit" />
         </EntityType>
         <EntityType Name="tidentity_role_detail">
           <Key>
@@ -614,7 +612,6 @@
           <Property Name="Max_student" Type="Int32" Nullable="false" />
           <Property Name="class_status_id" Type="Int32" Nullable="false" />
           <Property Name="class_payment" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
-          <Property Name="coach_payment" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="tclass_reserve" Relationship="Self.FK_class_reserve_class_schedule" FromRole="tclass_schedule" ToRole="tclass_reserve" />
           <NavigationProperty Name="tclass_status_detail" Relationship="Self.FK_class_schedule_class_status_detail" FromRole="tclass_schedule" ToRole="tclass_status_detail" />
           <NavigationProperty Name="tclasses" Relationship="Self.FK_class_schedule_classes" FromRole="tclass_schedule" ToRole="tclasses" />
@@ -732,8 +729,7 @@
           <Property Name="birthday" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="gender_id" Type="Int32" Nullable="false" />
-          <Property Name="activated" Type="Boolean" Nullable="false" />
-          <Property Name="payment" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="activated" Type="Boolean" />
           <NavigationProperty Name="tclass_reserve" Relationship="Self.FK_class_reserve_Identity1" FromRole="tIdentity" ToRole="tclass_reserve" />
           <NavigationProperty Name="tclass_schedule" Relationship="Self.FK_class_schedule_Identity" FromRole="tIdentity" ToRole="tclass_schedule" />
           <NavigationProperty Name="tcoach_expert" Relationship="Self.FK_coach_expert_Identity" FromRole="tIdentity" ToRole="tcoach_expert" />
@@ -1224,7 +1220,6 @@
                 <ScalarProperty Name="Max_student" ColumnName="Max_student" />
                 <ScalarProperty Name="class_status_id" ColumnName="class_status_id" />
                 <ScalarProperty Name="class_payment" ColumnName="class_payment" />
-                <ScalarProperty Name="coach_payment" ColumnName="coach_payment" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1329,7 +1324,6 @@
                 <ScalarProperty Name="address" ColumnName="address" />
                 <ScalarProperty Name="gender_id" ColumnName="gender_id" />
                 <ScalarProperty Name="activated" ColumnName="activated" />
-                <ScalarProperty Name="payment" ColumnName="payment" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
