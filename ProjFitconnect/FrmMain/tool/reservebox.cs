@@ -21,24 +21,45 @@ namespace FrmMain
         //private tclass_reserve _tr;
         private tIdentity _i;
         private ttimes_detail _td;
-        public tclasses tc { get { return _tc; } set { 
-                _tc = value; 
+        public tclasses tc
+        {
+            get { return _tc; }
+            set
+            {
+                _tc = value;
                 label5.Text = _tc.class_name;
                 if (!string.IsNullOrEmpty(_tc.class_photo))
                 {
                     string path = Application.StartupPath + "\\ClassImages";
                     pictureBox1.Image = new Bitmap(path + "\\" + _tc.class_photo);
                 }
-            } }
-        public tIdentity i { get { return _i; } set { _i = value; label6.Text = _i.name; } }
-        public tclass_schedule ts { get { return _ts; } set { _ts = value; label7.Text = _ts.course_date.ToShortDateString()/*.ToString()*/; } }
-        public ttimes_detail td { get { return _td; } set { _td = value; label8.Text = _td.time_name; } }
+            }
+        }
+        //public tIdentity i { get { return _i; } set { _i = value;} }
+        //public tclass_schedule ts { get { return _ts; } set { _ts = value;} }
+        //public ttimes_detail td { get { return _td; } set { _td = value; } }
 
-        
+        public string cls 
+        {
+            get { return this.label5.Text; }
+            set { this.label5.Text = value;}
+        }
+        public string ids 
+        {
+            get { return this.label6.Text; }
+            set { this.label6.Text = value; }
+        }
+        public string csch { set { this.label7.Text = value; } }
+        public string time { set { this.label8.Text = value; } }
+
         public reservebox()
         {
             InitializeComponent();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (this.showReserve != null) this.showReserve(this);
+        }
     }
 }

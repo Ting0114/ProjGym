@@ -29,46 +29,44 @@ namespace FrmMain
             gymEntities db = new gymEntities();
             int findID = this.identity.id;
             var classreserved = from c in db.tclasses
-                                join s in db.tclass_schedule on c.class_id equals s.class_id
-                                join t in db.ttimes_detail on s.course_time_id equals t.time_id
-                                join r in db.tclass_reserve on s.class_schedule_id equals r.class_schedule_id
-                                join i in db.tIdentity on r.member_id equals i.id
-                                where r.member_id == findID && r.reserve_status == true
-                                select new { classes = c, classSchedule = s, identity = i, time = t };
+                                from cr in db.tclass_reserve
+                                from i in db.tIdentity
+                                from cs in db.tclass_schedule
+                                from t in db.ttimes_detail
+                                where cr.member_id == findID
+                                where cr.class_schedule_id == cs.class_schedule_id
+                                where cs.class_id == c.class_id
+                                where cs.coach_id == i.id
+                                where cs.course_time_id == t.time_id
+                                where cr.reserve_status == true
+                                select new { classes = c.class_name, identity = i.name, classSchedule = cs.course_date, time = t.time_name };
 
             foreach (var item in classreserved)
             {
-
                 reservebox rb = new reservebox();
 
                 rb.Width = 700;
                 rb.Height = 180;
                 rb.Location = new System.Drawing.Point(flowLayoutPanel1.Width / 2 - rb.Width / 2);
 
-                rb.tc = item.classes;
-                rb.i = item.identity;
-                rb.ts = item.classSchedule;
-                rb.td = item.time;
+                rb.cls = item.classes;
+                rb.ids = item.identity;
+                rb.csch = item.classSchedule.ToString();
+                rb.time = item.time;
                 rb.showReserve += showReserve;
                 flowLayoutPanel1.Controls.Add(rb);
             }
         }
 
         private void showReserve(reservebox p)
-        { 
+        {
             using (gymEntities db = new gymEntities())
-            { 
-                tclass_reserve reservation = db.tclass_reserve.FirstOrDefault(r => r.member_id == p.i.id && r.class_schedule_id == p.ts.class_schedule_id);
-
+            {
+                tclass_reserve reservation = db.tclass_reserve.FirstOrDefault(r => r.member_id == this.identity.id && r.tclass_schedule.tclasses.class_name == p.cls);
                 if (reservation != null)
                 {
-                    // 更新预订状态
                     reservation.reserve_status = false;
-
-                    // 保存更改到数据库
                     db.SaveChanges();
-
-                    // 重新加载相关实体
                     db.Entry(reservation).Reload();
 
                     MessageBox.Show("取消成功");

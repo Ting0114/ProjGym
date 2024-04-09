@@ -136,5 +136,16 @@ namespace ProjGym
                 return;
             expert_text.Add(((TextBox)sender).Text);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            tb_Name.Text ="安西教練";
+            cb_GenderList.SelectedIndex = 0;
+            tb_Phone.Text = "0900";
+            tb_Password.Text = "ha123";
+            tb_Address.Text = "Japan";
+            tb_Mail.Text = "AnnXi@ispn.com";
+            tb_intro.Text = "年輕時曾是日本國家籃球隊選手，退休後擔任大學籃球教練。";
+        }
     } 
 }

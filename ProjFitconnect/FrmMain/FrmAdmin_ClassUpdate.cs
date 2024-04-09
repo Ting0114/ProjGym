@@ -25,7 +25,7 @@ namespace mid_Coonect
             get
             {
                 if (_course == null) { _course = new tclasses(); }
-                _course.class_id = Convert.ToInt32(lbl_ID.Text);
+                _course.class_id = Convert.ToInt32(txt_ID.Text);
                 _course.class_sort1_id = Convert.ToInt32(cb_Sort1.Text);
                 _course.class_sort2_id = Convert.ToInt32(cb_Sort2.Text);
                 _course.limited_gender = Convert.ToInt32(cb_Limit.Text);
@@ -38,7 +38,7 @@ namespace mid_Coonect
             set
             {
                 _course = value;
-                lbl_ID.Text = _course.class_id.ToString();
+                txt_ID.Text = _course.class_id.ToString();
                 cb_Sort1.Text = _course.class_sort1_id.ToString();
                 cb_Sort2.Text = _course.class_sort2_id.ToString();
                 cb_Limit.Text = _course.limited_gender.ToString();
@@ -78,11 +78,11 @@ namespace mid_Coonect
 
         private void Btn_Save_Click(object sender, EventArgs e)
         {
-            if (this.lbl_ID.Text.ToString().Equals("id")) return;
+            if (this.txt_ID.Text.ToString().Equals("id")) return;
             _isOK = DialogResult.OK;
             try
             {
-                int id = Convert.ToInt32(lbl_ID.Text);
+                int id = Convert.ToInt32(txt_ID.Text);
                 dbEdit(id);
             }
             catch (Exception ex) { MessageBox.Show(ex.ToString()); }
@@ -98,11 +98,11 @@ namespace mid_Coonect
                                 編號 = r.class_id,
                                 課程名稱 = r.class_name,
                                 類型 = r.class_sort1_id,
-                                分類 = r.class_sort2_id,
-                                照片 = r.class_photo,
+                                分類 = r.class_sort2_id, 
                                 介紹 = r.class_introduction,
                                 開放 = c.class_status_discribe,
-                                限制 = r.limited_gender
+                                限制 = r.limited_gender,
+                                照片 = r.class_photo,
                             };
             this.dataGridView_ClassSortList.DataSource = classsort.ToList();
             this.dataGridView_ClassSortList.Columns[6].Width = 200;
@@ -136,7 +136,7 @@ namespace mid_Coonect
             tclasses classsort = db.tclasses.FirstOrDefault(x => x.class_id == id);
             if (classsort == null) return;
             this.course = classsort;
-            lbl_ID.Text = classsort.class_id.ToString();
+            txt_ID.Text = classsort.class_id.ToString();
             cb_Sort1.Text = classsort.class_sort1_id.ToString();
             cb_Sort2.Text = classsort.class_sort2_id.ToString();
             cb_Limit.Text = classsort.limited_gender.ToString();
@@ -194,10 +194,7 @@ namespace mid_Coonect
         }
         private void DataGridView_ClassSortList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex == -1)
-            {
-                return;
-            }
+            if (e.RowIndex <0) return; 
             _index = (int)dataGridView_ClassSortList.Rows[e.RowIndex].Cells[0].Value;
             dbSelect(_index);
         }

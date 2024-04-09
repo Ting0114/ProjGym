@@ -50,6 +50,7 @@
             this.tb_intro = new System.Windows.Forms.RichTextBox();
             this.panel_expert = new System.Windows.Forms.FlowLayoutPanel();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Photo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -273,12 +274,25 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("微軟正黑體", 10.76635F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button1.Location = new System.Drawing.Point(811, 409);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(69, 28);
+            this.button1.TabIndex = 55;
+            this.button1.Text = "Demo";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmNewCoachRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaShell;
             this.ClientSize = new System.Drawing.Size(938, 716);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel_expert);
             this.Controls.Add(this.tb_intro);
             this.Controls.Add(this.label9);
@@ -341,5 +355,6 @@
         private System.Windows.Forms.RichTextBox tb_intro;
         private System.Windows.Forms.FlowLayoutPanel panel_expert;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button button1;
     }
 }

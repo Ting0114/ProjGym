@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCoachInfo));
-            this.roundPictureBox1 = new YourNamespace.RoundPictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,18 +37,9 @@
             this.labelClass = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.labelLicense = new System.Windows.Forms.Label();
+            this.roundPictureBox1 = new YourNamespace.RoundPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // roundPictureBox1
-            // 
-            this.roundPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("roundPictureBox1.Image")));
-            this.roundPictureBox1.Location = new System.Drawing.Point(504, 73);
-            this.roundPictureBox1.Name = "roundPictureBox1";
-            this.roundPictureBox1.Size = new System.Drawing.Size(182, 183);
-            this.roundPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.roundPictureBox1.TabIndex = 1;
-            this.roundPictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -57,7 +47,7 @@
             this.label1.ForeColor = System.Drawing.Color.FloralWhite;
             this.label1.Location = new System.Drawing.Point(105, 97);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 18);
+            this.label1.Size = new System.Drawing.Size(73, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "教練姓名";
             // 
@@ -68,7 +58,7 @@
             this.labelName.ForeColor = System.Drawing.Color.NavajoWhite;
             this.labelName.Location = new System.Drawing.Point(289, 73);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(95, 42);
+            this.labelName.Size = new System.Drawing.Size(106, 47);
             this.labelName.TabIndex = 3;
             this.labelName.Text = "label";
             // 
@@ -78,7 +68,7 @@
             this.label3.ForeColor = System.Drawing.Color.FloralWhite;
             this.label3.Location = new System.Drawing.Point(119, 167);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(36, 18);
+            this.label3.Size = new System.Drawing.Size(41, 20);
             this.label3.TabIndex = 4;
             this.label3.Text = "性別";
             // 
@@ -89,7 +79,7 @@
             this.labelGender.ForeColor = System.Drawing.Color.Lime;
             this.labelGender.Location = new System.Drawing.Point(292, 164);
             this.labelGender.Name = "labelGender";
-            this.labelGender.Size = new System.Drawing.Size(48, 22);
+            this.labelGender.Size = new System.Drawing.Size(53, 24);
             this.labelGender.TabIndex = 5;
             this.labelGender.Text = "label";
             // 
@@ -99,7 +89,7 @@
             this.label2.ForeColor = System.Drawing.Color.FloralWhite;
             this.label2.Location = new System.Drawing.Point(105, 252);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 18);
+            this.label2.Size = new System.Drawing.Size(73, 20);
             this.label2.TabIndex = 4;
             this.label2.Text = "開授課程";
             // 
@@ -110,7 +100,7 @@
             this.labelClass.ForeColor = System.Drawing.Color.NavajoWhite;
             this.labelClass.Location = new System.Drawing.Point(292, 246);
             this.labelClass.Name = "labelClass";
-            this.labelClass.Size = new System.Drawing.Size(63, 28);
+            this.labelClass.Size = new System.Drawing.Size(71, 31);
             this.labelClass.TabIndex = 5;
             this.labelClass.Text = "label";
             // 
@@ -120,7 +110,7 @@
             this.label4.ForeColor = System.Drawing.Color.FloralWhite;
             this.label4.Location = new System.Drawing.Point(105, 331);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 18);
+            this.label4.Size = new System.Drawing.Size(73, 20);
             this.label4.TabIndex = 4;
             this.label4.Text = "專業證照";
             // 
@@ -134,9 +124,19 @@
             this.labelLicense.TabIndex = 5;
             this.labelLicense.Text = "label";
             // 
+            // roundPictureBox1
+            // 
+            this.roundPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("roundPictureBox1.Image")));
+            this.roundPictureBox1.Location = new System.Drawing.Point(517, 73);
+            this.roundPictureBox1.Name = "roundPictureBox1";
+            this.roundPictureBox1.Size = new System.Drawing.Size(169, 183);
+            this.roundPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.roundPictureBox1.TabIndex = 1;
+            this.roundPictureBox1.TabStop = false;
+            // 
             // FrmCoachInfo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(796, 487);

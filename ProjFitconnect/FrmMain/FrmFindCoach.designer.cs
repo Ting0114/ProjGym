@@ -61,6 +61,7 @@
             // 
             // splitContainer2.Panel1
             // 
+            this.splitContainer2.Panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.splitContainer2.Panel1.Controls.Add(this.checkBox8);
             this.splitContainer2.Panel1.Controls.Add(this.checkBox7);
             this.splitContainer2.Panel1.Controls.Add(this.checkBox6);
@@ -83,11 +84,11 @@
             // checkBox8
             // 
             this.checkBox8.AutoSize = true;
-            this.checkBox8.Font = new System.Drawing.Font("微軟正黑體", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.checkBox8.Location = new System.Drawing.Point(76, 181);
+            this.checkBox8.Font = new System.Drawing.Font("微軟正黑體", 14.13084F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.checkBox8.Location = new System.Drawing.Point(76, 166);
             this.checkBox8.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(63, 26);
+            this.checkBox8.Size = new System.Drawing.Size(73, 30);
             this.checkBox8.TabIndex = 9;
             this.checkBox8.Text = "追蹤";
             this.checkBox8.UseVisualStyleBackColor = true;
@@ -96,11 +97,11 @@
             // checkBox7
             // 
             this.checkBox7.AutoSize = true;
-            this.checkBox7.Font = new System.Drawing.Font("微軟正黑體", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.checkBox7.Font = new System.Drawing.Font("微軟正黑體", 14.13084F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.checkBox7.Location = new System.Drawing.Point(76, 292);
             this.checkBox7.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(63, 26);
+            this.checkBox7.Size = new System.Drawing.Size(73, 30);
             this.checkBox7.TabIndex = 8;
             this.checkBox7.Text = "更多";
             this.checkBox7.UseVisualStyleBackColor = true;
@@ -109,11 +110,11 @@
             // checkBox6
             // 
             this.checkBox6.AutoSize = true;
-            this.checkBox6.Font = new System.Drawing.Font("微軟正黑體", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.checkBox6.Location = new System.Drawing.Point(76, 57);
+            this.checkBox6.Font = new System.Drawing.Font("微軟正黑體", 14.13084F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.checkBox6.Location = new System.Drawing.Point(76, 42);
             this.checkBox6.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(63, 26);
+            this.checkBox6.Size = new System.Drawing.Size(73, 30);
             this.checkBox6.TabIndex = 7;
             this.checkBox6.Text = "所有";
             this.checkBox6.UseVisualStyleBackColor = true;
@@ -122,7 +123,7 @@
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.AutoScroll = true;
-            this.flowLayoutPanel2.Font = new System.Drawing.Font("微軟正黑體", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.flowLayoutPanel2.Font = new System.Drawing.Font("微軟正黑體", 14.13084F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.flowLayoutPanel2.Location = new System.Drawing.Point(72, 323);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(139, 236);
@@ -131,11 +132,11 @@
             // checkBox5
             // 
             this.checkBox5.AutoSize = true;
-            this.checkBox5.Font = new System.Drawing.Font("微軟正黑體", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.checkBox5.Font = new System.Drawing.Font("微軟正黑體", 14.13084F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.checkBox5.Location = new System.Drawing.Point(76, 260);
             this.checkBox5.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(63, 26);
+            this.checkBox5.Size = new System.Drawing.Size(73, 30);
             this.checkBox5.TabIndex = 5;
             this.checkBox5.Text = "無氧";
             this.checkBox5.UseVisualStyleBackColor = true;
@@ -144,11 +145,11 @@
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
-            this.checkBox4.Font = new System.Drawing.Font("微軟正黑體", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.checkBox4.Font = new System.Drawing.Font("微軟正黑體", 14.13084F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.checkBox4.Location = new System.Drawing.Point(76, 229);
             this.checkBox4.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(63, 26);
+            this.checkBox4.Size = new System.Drawing.Size(73, 30);
             this.checkBox4.TabIndex = 4;
             this.checkBox4.Text = "有氧";
             this.checkBox4.UseVisualStyleBackColor = true;
@@ -157,7 +158,7 @@
             // label1
             // 
             this.label1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.label1.Font = new System.Drawing.Font("微軟正黑體", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label1.Font = new System.Drawing.Font("微軟正黑體", 14.13084F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label1.Location = new System.Drawing.Point(35, 209);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(176, 2);
@@ -167,11 +168,11 @@
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Font = new System.Drawing.Font("微軟正黑體", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.checkBox3.Location = new System.Drawing.Point(76, 150);
+            this.checkBox3.Font = new System.Drawing.Font("微軟正黑體", 14.13084F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.checkBox3.Location = new System.Drawing.Point(76, 135);
             this.checkBox3.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(63, 26);
+            this.checkBox3.Size = new System.Drawing.Size(73, 30);
             this.checkBox3.TabIndex = 2;
             this.checkBox3.Text = "其他";
             this.checkBox3.UseVisualStyleBackColor = true;
@@ -180,11 +181,11 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("微軟正黑體", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.checkBox2.Location = new System.Drawing.Point(76, 119);
+            this.checkBox2.Font = new System.Drawing.Font("微軟正黑體", 14.13084F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.checkBox2.Location = new System.Drawing.Point(76, 104);
             this.checkBox2.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(63, 26);
+            this.checkBox2.Size = new System.Drawing.Size(73, 30);
             this.checkBox2.TabIndex = 1;
             this.checkBox2.Text = "女性";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -193,11 +194,11 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("微軟正黑體", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.checkBox1.Location = new System.Drawing.Point(76, 88);
+            this.checkBox1.Font = new System.Drawing.Font("微軟正黑體", 14.13084F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.checkBox1.Location = new System.Drawing.Point(76, 73);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(63, 26);
+            this.checkBox1.Size = new System.Drawing.Size(73, 30);
             this.checkBox1.TabIndex = 0;
             this.checkBox1.Text = "男性";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -207,6 +208,7 @@
             // 
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.AutoSize = true;
+            this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -228,7 +230,7 @@
             // 
             // splitContainer1
             // 
-            this.splitContainer1.BackColor = System.Drawing.Color.Azure;
+            this.splitContainer1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
             this.splitContainer1.Name = "splitContainer1";
@@ -249,7 +251,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Azure;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1029, 658);
             this.Controls.Add(this.splitContainer1);
             this.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
