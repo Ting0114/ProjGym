@@ -26,7 +26,7 @@ namespace FrmMain
                 label5.Text = _tc.class_name;
                 if (!string.IsNullOrEmpty(_tc.class_photo))
                 {
-                    string path = Application.StartupPath + "\\ClassImages";
+                    string path = Application.StartupPath + "\\ClassPic";
                     pictureBox1.Image = new Bitmap(path + "\\" + _tc.class_photo);
                 }
             } }
