@@ -33,20 +33,23 @@
             this.button2 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.lblfID = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button3 = new System.Windows.Forms.Button();
+            this.fbregion = new prjComponentDemo.usercontrol.FieldBox();
             this.fbFieldPayment = new prjComponentDemo.usercontrol.FieldBox();
             this.fbFieldName = new prjComponentDemo.usercontrol.FieldBox();
             this.fbFieldFloor = new prjComponentDemo.usercontrol.FieldBox();
-            this.fbregion = new prjComponentDemo.usercontrol.FieldBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Location = new System.Drawing.Point(357, 17);
+            this.pictureBox1.Location = new System.Drawing.Point(524, 15);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(431, 337);
+            this.pictureBox1.Size = new System.Drawing.Size(378, 293);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -56,11 +59,11 @@
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button1.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button1.Location = new System.Drawing.Point(527, 400);
+            this.button1.Location = new System.Drawing.Point(957, 117);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(121, 38);
+            this.button1.Size = new System.Drawing.Size(106, 33);
             this.button1.TabIndex = 4;
-            this.button1.Text = "確定";
+            this.button1.Text = "新增";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -68,9 +71,9 @@
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button2.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button2.Location = new System.Drawing.Point(667, 400);
+            this.button2.Location = new System.Drawing.Point(957, 229);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(121, 38);
+            this.button2.Size = new System.Drawing.Size(106, 33);
             this.button2.TabIndex = 5;
             this.button2.Text = "取消";
             this.button2.UseVisualStyleBackColor = true;
@@ -84,12 +87,52 @@
             // 
             this.lblfID.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblfID.AutoSize = true;
-            this.lblfID.Location = new System.Drawing.Point(277, 34);
+            this.lblfID.Location = new System.Drawing.Point(454, 29);
             this.lblfID.Name = "lblfID";
-            this.lblfID.Size = new System.Drawing.Size(41, 15);
+            this.lblfID.Size = new System.Drawing.Size(35, 13);
             this.lblfID.TabIndex = 6;
             this.lblfID.Text = "label1";
             this.lblfID.Visible = false;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(238, 343);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 46;
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.Size = new System.Drawing.Size(653, 300);
+            this.dataGridView1.TabIndex = 8;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // button3
+            // 
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button3.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button3.Location = new System.Drawing.Point(957, 278);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(106, 33);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "修改";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // fbregion
+            // 
+            this.fbregion.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.fbregion.fieldName = "region";
+            this.fbregion.fieldValue = "";
+            this.fbregion.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.fbregion.Location = new System.Drawing.Point(223, 15);
+            this.fbregion.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.fbregion.Name = "fbregion";
+            this.fbregion.Size = new System.Drawing.Size(215, 68);
+            this.fbregion.TabIndex = 7;
             // 
             // fbFieldPayment
             // 
@@ -97,10 +140,10 @@
             this.fbFieldPayment.fieldName = "費用";
             this.fbFieldPayment.fieldValue = "";
             this.fbFieldPayment.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.fbFieldPayment.Location = new System.Drawing.Point(13, 275);
+            this.fbFieldPayment.Location = new System.Drawing.Point(223, 238);
             this.fbFieldPayment.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.fbFieldPayment.Name = "fbFieldPayment";
-            this.fbFieldPayment.Size = new System.Drawing.Size(246, 79);
+            this.fbFieldPayment.Size = new System.Drawing.Size(215, 68);
             this.fbFieldPayment.TabIndex = 2;
             // 
             // fbFieldName
@@ -109,10 +152,10 @@
             this.fbFieldName.fieldName = "場地名";
             this.fbFieldName.fieldValue = "";
             this.fbFieldName.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.fbFieldName.Location = new System.Drawing.Point(13, 190);
+            this.fbFieldName.Location = new System.Drawing.Point(223, 165);
             this.fbFieldName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.fbFieldName.Name = "fbFieldName";
-            this.fbFieldName.Size = new System.Drawing.Size(246, 79);
+            this.fbFieldName.Size = new System.Drawing.Size(215, 68);
             this.fbFieldName.TabIndex = 1;
             // 
             // fbFieldFloor
@@ -121,33 +164,23 @@
             this.fbFieldFloor.fieldName = "樓層";
             this.fbFieldFloor.fieldValue = "";
             this.fbFieldFloor.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.fbFieldFloor.Location = new System.Drawing.Point(13, 105);
+            this.fbFieldFloor.Location = new System.Drawing.Point(223, 91);
             this.fbFieldFloor.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.fbFieldFloor.Name = "fbFieldFloor";
-            this.fbFieldFloor.Size = new System.Drawing.Size(246, 79);
+            this.fbFieldFloor.Size = new System.Drawing.Size(215, 68);
             this.fbFieldFloor.TabIndex = 0;
-            // 
-            // fbregion
-            // 
-            this.fbregion.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.fbregion.fieldName = "region";
-            this.fbregion.fieldValue = "";
-            this.fbregion.Font = new System.Drawing.Font("微軟正黑體", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.fbregion.Location = new System.Drawing.Point(13, 17);
-            this.fbregion.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.fbregion.Name = "fbregion";
-            this.fbregion.Size = new System.Drawing.Size(246, 79);
-            this.fbregion.TabIndex = 7;
             // 
             // FrmField
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MintCream;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1124, 672);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.fbregion);
             this.Controls.Add(this.lblfID);
             this.Controls.Add(this.button2);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.fbFieldPayment);
@@ -157,7 +190,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FrmField_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -174,5 +209,7 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label lblfID;
         private prjComponentDemo.usercontrol.FieldBox fbregion;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button3;
     }
 }

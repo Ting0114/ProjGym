@@ -46,7 +46,7 @@ namespace Gym
                 _Field_photo = _field.field_photo;
                 if (!string.IsNullOrEmpty(_Field_photo))
                 {
-                    string path = Application.StartupPath + "\\roomImages";
+                    string path = Application.StartupPath + "\\fieldImages";
                     pictureBox1.Image = new Bitmap(path + "\\" + _Field_photo);
                 }
                 
@@ -92,6 +92,85 @@ namespace Gym
 
             File.Copy(openFileDialog1.FileName, path + "\\" + _Field_photo);
             pictureBox1.Image = new Bitmap(path + "\\" + _Field_photo);
+        }
+
+        private void FrmField_Load(object sender, EventArgs e)
+        {
+            ShowfieldList();
+        }
+
+        private void ShowfieldList()
+        {
+            gymEntities db = new gymEntities();
+            var Field = from f in db.tfield
+                        join r in db.tregion_table on f.region_id equals r.region_id
+                        select new
+                        {
+                            場地編號 = f.field_id,
+                            縣市 = r.city,
+                            地區 = r.region,
+                            樓層 = f.floor,
+                            場地名稱 = f.field_name,
+                            租借金額_每小時 = f.field_payment,
+                            場地圖片 = f.field_photo
+                        };
+            this.dataGridView1.DataSource = Field.ToList();
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dataGridView1.Columns["租借金額_每小時"].HeaderText = "租借金額/每小時";
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) return;
+            if (pictureBox1.Image != null) this.pictureBox1.Image = null;
+            int id = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
+            dbSelect(id);
+        }
+        private void dbSelect(int id)
+        {
+            gymEntities db = new gymEntities();
+            tfield field=db.tfield.FirstOrDefault(x=>x.field_id == id);
+            if (field == null) return;
+            this.fbregion.fieldValue = "台北市 大安區";
+            this.lblfID.Text=field.field_id.ToString();
+            this.fbFieldName.fieldValue = field.field_name;
+            this.fbFieldFloor.fieldValue = field.floor;
+            this.fbFieldPayment.fieldValue = field.field_payment.ToString();
+            if (!string.IsNullOrEmpty(_Field_photo))
+            {
+                string path = Application.StartupPath + "\\fieldImages";
+                pictureBox1.Image = new Bitmap(path + "\\" + _Field_photo);
+            } 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (this.lblfID.Text.ToString().Equals("id")) return; 
+            try
+            {
+                int id = Convert.ToInt32(lblfID.Text);
+                dbEdit(id);
+            }
+            catch (Exception ex) { MessageBox.Show(ex.ToString()); }
+            finally { ShowfieldList(); }
+        }
+        private void dbEdit(int id)
+        {
+            gymEntities db = new gymEntities();
+            var field = db.tfield.FirstOrDefault(x => x.field_id == id);
+            if (field == null) return;
+            field.floor=fbFieldFloor.fieldValue;
+            field.field_name = fbFieldName.fieldValue;
+            field.field_payment=Convert.ToDecimal(fbFieldPayment.fieldValue);
+            field.region_id = 1;
+            if (!string.IsNullOrEmpty(_Field_photo))
+            {
+                string path = Application.StartupPath + "\\fieldImages";
+                pictureBox1.Image = new Bitmap(path + "\\" + _Field_photo);
+            }
+            field.field_photo = _Field_photo;
+            db.SaveChanges();
+            MessageBox.Show("場地資料已更新");
         }
     }
 }

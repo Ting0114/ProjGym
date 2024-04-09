@@ -39,7 +39,7 @@ namespace FrmMain
                                 where cs.coach_id == i.id
                                 where cs.course_time_id == t.time_id
                                 where cr.reserve_status == true
-                                select new { classes = c.class_name, identity = i.name, classSchedule = cs.course_date, time = t.time_name };
+                                select new { classes = c ,identity = i.name, classSchedule = cs.course_date, time = t.time_name };
 
             foreach (var item in classreserved)
             {
@@ -48,8 +48,8 @@ namespace FrmMain
                 rb.Width = 700;
                 rb.Height = 180;
                 rb.Location = new System.Drawing.Point(flowLayoutPanel1.Width / 2 - rb.Width / 2);
-
-                rb.cls = item.classes;
+                
+                rb.tc=item.classes;
                 rb.ids = item.identity;
                 rb.csch = item.classSchedule.ToString();
                 rb.time = item.time;
